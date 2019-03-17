@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMainMenuContainer = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.msSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.msSupplier = new System.Windows.Forms.ToolStripMenuItem();
             this.msEmployee = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,13 +38,13 @@
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlMainMenuContainer
+            // pnlContainer
             // 
-            this.pnlMainMenuContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainMenuContainer.Location = new System.Drawing.Point(0, 31);
-            this.pnlMainMenuContainer.Name = "pnlMainMenuContainer";
-            this.pnlMainMenuContainer.Size = new System.Drawing.Size(924, 231);
-            this.pnlMainMenuContainer.TabIndex = 3;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(0, 31);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(924, 231);
+            this.pnlContainer.TabIndex = 3;
             // 
             // msSettings
             // 
@@ -76,6 +76,7 @@
             this.msInventory.Padding = new System.Windows.Forms.Padding(80, 0, 4, 0);
             this.msInventory.Size = new System.Drawing.Size(191, 27);
             this.msInventory.Text = "INVENTORY";
+            this.msInventory.Click += new System.EventHandler(this.msInventory_Click);
             // 
             // menuStrip1
             // 
@@ -105,7 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 262);
-            this.Controls.Add(this.pnlMainMenuContainer);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminMainMenuForm";
@@ -121,7 +122,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlMainMenuContainer;
+        private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.ToolStripMenuItem msSettings;
         private System.Windows.Forms.ToolStripMenuItem msSupplier;
         private System.Windows.Forms.ToolStripMenuItem msEmployee;

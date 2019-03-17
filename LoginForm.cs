@@ -11,16 +11,16 @@ namespace SMCSM
 {
     public partial class LoginForm : Form
     {
-        public LoginForm()
+        MainMenuForm thisMainForm;
+        public LoginForm(MainMenuForm a)
         {
             InitializeComponent();
+            thisMainForm = a;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MainMenuForm mmf = new MainMenuForm();
-
-            mmf.callFormToPnlContainer(new AdminMainMenuForm());
+            thisMainForm.callFormToPnlContainer(new AdminMainMenuForm());
         }
     }
 }

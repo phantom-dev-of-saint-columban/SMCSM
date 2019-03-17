@@ -14,8 +14,8 @@ namespace SMCSM
         public MainMenuForm()
         {
             InitializeComponent();
-
-            callFormToPnlContainer(new LoginForm());
+            LoginForm lf = new LoginForm(this);
+            callFormToPnlContainer(lf);
         }
 
         

@@ -42,7 +42,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(1016, 76);
+            this.btnLogin.Location = new System.Drawing.Point(1016, 133);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(99, 29);
             this.btnLogin.TabIndex = 6;
@@ -53,9 +53,9 @@
             // pnlContainer
             // 
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 106);
+            this.pnlContainer.Location = new System.Drawing.Point(0, 163);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1116, 359);
+            this.pnlContainer.Size = new System.Drawing.Size(1116, 302);
             this.pnlContainer.TabIndex = 3;
             // 
             // label1
@@ -64,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(270, 15);
+            this.label1.Location = new System.Drawing.Point(270, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 43);
             this.label1.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1116, 106);
+            this.panel1.Size = new System.Drawing.Size(1116, 163);
             this.panel1.TabIndex = 2;
             // 
             // label2
@@ -88,7 +88,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(523, 49);
+            this.label2.Location = new System.Drawing.Point(523, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(324, 43);
             this.label2.TabIndex = 1;
