@@ -9,18 +9,11 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class LoginForm : Form
+    public partial class AdminMainMenuForm : Form
     {
-        public LoginForm()
+        public AdminMainMenuForm()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            MainMenuForm mmf = new MainMenuForm();
-
-            mmf.callFormToPnlContainer(new AdminMainMenuForm());
         }
     }
 }

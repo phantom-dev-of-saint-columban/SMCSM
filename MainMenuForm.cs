@@ -14,21 +14,21 @@ namespace SMCSM
         public MainMenuForm()
         {
             InitializeComponent();
-            callLoginForm();
+
+            callFormToPnlContainer(new LoginForm());
         }
 
+        
         #region Dev Method
-        private void callLoginForm()
+        public void callFormToPnlContainer(Form b)
         {
-            LoginForm a = new LoginForm();
+            pnlContainer.Controls.Clear();
 
-            pnlContainer.Controls.Remove(a);
-
-            a.Dock = DockStyle.Fill;
-            a.TopLevel = false;
-            pnlContainer.Controls.Add(a);
-            a.TopMost = true;
-            a.Show();
+            b.Dock = DockStyle.Fill;
+            b.TopLevel = false;
+            pnlContainer.Controls.Add(b);
+            b.TopMost = true;
+            b.Show();
         }
         #endregion
     }
