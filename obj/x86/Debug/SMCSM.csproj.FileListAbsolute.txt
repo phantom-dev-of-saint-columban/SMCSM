@@ -1,8 +1,8 @@
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\SMCSM.exe
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\SMCSM.pdb
-C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.Form1.resources
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.Properties.Resources.resources
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.csproj.GenerateResource.Cache
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.exe
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.pdb
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.LoginForm.resources
+C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.MainMenuForm.resources

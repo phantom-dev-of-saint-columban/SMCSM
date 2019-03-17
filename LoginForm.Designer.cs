@@ -82,9 +82,10 @@
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(128, 79);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(383, 31);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUsername
             // 
@@ -94,6 +95,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(383, 31);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
