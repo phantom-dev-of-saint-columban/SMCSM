@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class AdminInventoryMenu : Form
+    public partial class AdminInventorySalesForm : Form
     {
-        public AdminInventoryMenu()
+        public AdminInventorySalesForm()
         {
             InitializeComponent();
         }

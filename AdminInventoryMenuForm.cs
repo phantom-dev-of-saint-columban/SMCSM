@@ -9,10 +9,9 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class AdminMainMenuForm : Form
+    public partial class AdminInventoryMenuForm : Form
     {
-        
-        public AdminMainMenuForm()
+        public AdminInventoryMenuForm()
         {
             InitializeComponent();
         }
@@ -28,23 +27,16 @@ namespace SMCSM
             b.Show();
         }
         #endregion
-
-        private void msInventory_Click(object sender, EventArgs e)
+        private void msInventoryStockIn_Click(object sender, EventArgs e)
         {
-            AdminInventoryMenuForm aim = new AdminInventoryMenuForm();
-            callFormToPnlContainer(aim);
+            AdminInventoryStockInForm aisi = new AdminInventoryStockInForm();
+            callFormToPnlContainer(aisi);
         }
 
-        private void msEmployee_Click(object sender, EventArgs e)
+        private void msInventorySales_Click(object sender, EventArgs e)
         {
-            AdminEmployeeForm aef = new AdminEmployeeForm();
-            callFormToPnlContainer(aef);
-
-        }
-
-        private void msSupplier_Click(object sender, EventArgs e)
-        {
-
+            AdminInventorySalesForm aisf = new AdminInventorySalesForm();
+            callFormToPnlContainer(aisf);
         }
     }
 }

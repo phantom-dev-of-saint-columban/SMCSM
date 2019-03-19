@@ -60,6 +60,7 @@
             this.msSupplier.Padding = new System.Windows.Forms.Padding(80, 0, 4, 0);
             this.msSupplier.Size = new System.Drawing.Size(172, 27);
             this.msSupplier.Text = "SUPPLIER";
+            this.msSupplier.Click += new System.EventHandler(this.msSupplier_Click);
             // 
             // msEmployee
             // 
@@ -68,6 +69,7 @@
             this.msEmployee.Padding = new System.Windows.Forms.Padding(80, 0, 4, 0);
             this.msEmployee.Size = new System.Drawing.Size(182, 27);
             this.msEmployee.Text = "EMPLOYEE";
+            this.msEmployee.Click += new System.EventHandler(this.msEmployee_Click);
             // 
             // msInventory
             // 

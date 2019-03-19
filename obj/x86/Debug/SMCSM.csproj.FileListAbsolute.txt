@@ -9,4 +9,7 @@ C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\MySql.Data.dll
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.csprojResolveAssemblyReference.cache
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AdminMainMenuForm.resources
-C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AdminInventoryMenu.resources
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AdminEmployeeForm.resources
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AdminInventoryMenuForm.resources
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AdminInventorySalesForm.resources
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AdminInventoryStockInForm.resources

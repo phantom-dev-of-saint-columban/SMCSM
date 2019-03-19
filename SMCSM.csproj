@@ -49,11 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminInventoryMenu.cs">
+    <Compile Include="AdminEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminInventoryMenu.Designer.cs">
-      <DependentUpon>AdminInventoryMenu.cs</DependentUpon>
+    <Compile Include="AdminEmployeeForm.Designer.cs">
+      <DependentUpon>AdminEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventoryMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInventoryMenuForm.Designer.cs">
+      <DependentUpon>AdminInventoryMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventorySalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInventorySalesForm.Designer.cs">
+      <DependentUpon>AdminInventorySalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminInventoryStockInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInventoryStockInForm.Designer.cs">
+      <DependentUpon>AdminInventoryStockInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminMainMenuForm.cs">
       <SubType>Form</SubType>
@@ -76,8 +94,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminInventoryMenu.resx">
-      <DependentUpon>AdminInventoryMenu.cs</DependentUpon>
+    <EmbeddedResource Include="AdminEmployeeForm.resx">
+      <DependentUpon>AdminEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInventoryMenuForm.resx">
+      <DependentUpon>AdminInventoryMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInventorySalesForm.resx">
+      <DependentUpon>AdminInventorySalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminInventoryStockInForm.resx">
+      <DependentUpon>AdminInventoryStockInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMainMenuForm.resx">
       <DependentUpon>AdminMainMenuForm.cs</DependentUpon>

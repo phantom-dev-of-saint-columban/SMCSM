@@ -1,6 +1,6 @@
 ﻿namespace SMCSM
 {
-    partial class AdminInventoryMenu
+    partial class AdminInventoryMenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.msInventorySales = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlInventoryContainer = new System.Windows.Forms.Panel();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.msInventoryStockIn = new System.Windows.Forms.ToolStripMenuItem();
             this.msInventoryStockReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,14 +43,15 @@
             this.msInventorySales.Padding = new System.Windows.Forms.Padding(200, 0, 4, 0);
             this.msInventorySales.Size = new System.Drawing.Size(265, 27);
             this.msInventorySales.Text = "SALES";
+            this.msInventorySales.Click += new System.EventHandler(this.msInventorySales_Click);
             // 
-            // pnlInventoryContainer
+            // pnlContainer
             // 
-            this.pnlInventoryContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInventoryContainer.Location = new System.Drawing.Point(0, 31);
-            this.pnlInventoryContainer.Name = "pnlInventoryContainer";
-            this.pnlInventoryContainer.Size = new System.Drawing.Size(959, 386);
-            this.pnlInventoryContainer.TabIndex = 4;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(0, 31);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(959, 386);
+            this.pnlContainer.TabIndex = 4;
             // 
             // msInventoryStockIn
             // 
@@ -59,6 +60,7 @@
             this.msInventoryStockIn.Padding = new System.Windows.Forms.Padding(200, 0, 4, 0);
             this.msInventoryStockIn.Size = new System.Drawing.Size(290, 27);
             this.msInventoryStockIn.Text = "STOCK IN";
+            this.msInventoryStockIn.Click += new System.EventHandler(this.msInventoryStockIn_Click);
             // 
             // msInventoryStockReturn
             // 
@@ -82,15 +84,15 @@
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // AdminInventoryMenu
+            // AdminInventoryMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 417);
-            this.Controls.Add(this.pnlInventoryContainer);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminInventoryMenu";
+            this.Name = "AdminInventoryMenuForm";
             this.Text = "AdminInventoryMenu";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -102,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStripMenuItem msInventorySales;
-        private System.Windows.Forms.Panel pnlInventoryContainer;
+        private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.ToolStripMenuItem msInventoryStockIn;
         private System.Windows.Forms.ToolStripMenuItem msInventoryStockReturn;
         private System.Windows.Forms.MenuStrip menuStrip1;
