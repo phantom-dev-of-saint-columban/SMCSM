@@ -22,7 +22,7 @@ namespace KOTL
     class CallSqlModule
     {
         #region Sql Variables and Connections
-        String sqlconnection = "datasource = localhost;port = 3306;Initial Catalog='JHCSC';username = root;password = 1234;";
+        String sqlconnection = "datasource = localhost;port = 3306;Initial Catalog='SMCSM';username = root;password = 1234;";
         MySqlConnection myconn;
         MySqlDataAdapter sda;
         DataSet ds;

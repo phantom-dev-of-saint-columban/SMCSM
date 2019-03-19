@@ -11,8 +11,12 @@ namespace SMCSM
 {
     public partial class AdminMainMenuForm : Form
     {
-        Form thisForm;
-        #region
+        
+        public AdminMainMenuForm()
+        {
+            InitializeComponent();
+        }
+        #region Dev's Methods
         public void callFormToPnlContainer(Form b)
         {
             pnlContainer.Controls.Clear();
@@ -24,13 +28,11 @@ namespace SMCSM
             b.Show();
         }
         #endregion
-        public AdminMainMenuForm()
-        {
-            InitializeComponent();
-        }
 
         private void msInventory_Click(object sender, EventArgs e)
         {
+            AdminInventoryMenu aim = new AdminInventoryMenu();
+            callFormToPnlContainer(aim);
         }
     }
 }

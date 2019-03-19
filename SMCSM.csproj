@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminInventoryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInventoryMenu.Designer.cs">
+      <DependentUpon>AdminInventoryMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminInventoryMenu.resx">
+      <DependentUpon>AdminInventoryMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainMenuForm.resx">
       <DependentUpon>AdminMainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
