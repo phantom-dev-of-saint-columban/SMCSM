@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class AdminEmployeeForm : Form
+    public partial class AddNewEmployee : Form
     {
-        public AdminEmployeeForm()
+        public AddNewEmployee()
         {
             InitializeComponent();
-        }
-
-        private void btnAddEmployee_Click(object sender, EventArgs e)
-        {
-            AddNewEmployee ane = new AddNewEmployee();
-            ane.ShowDialog();
         }
     }
 }
