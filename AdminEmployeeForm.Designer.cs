@@ -40,7 +40,6 @@
             this.lblTotalEmployees = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.dtEmployees = new System.Windows.Forms.DataGridView();
             this.pnlProfile = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.lblBirthDate = new System.Windows.Forms.Label();
@@ -49,8 +48,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.lblPosition = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lblMiddleName = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblIDNumber = new System.Windows.Forms.Label();
@@ -70,9 +67,10 @@
             this.lblDay = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtEmployees)).BeginInit();
+            this.tblEmployee = new System.Windows.Forms.DataGridView();
             this.pnlProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // lblContactNumber
@@ -205,15 +203,6 @@
             this.label27.TabIndex = 99;
             this.label27.Text = "TOTAL EMPLOYEES:";
             // 
-            // dtEmployees
-            // 
-            this.dtEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtEmployees.Location = new System.Drawing.Point(427, 106);
-            this.dtEmployees.Name = "dtEmployees";
-            this.dtEmployees.Size = new System.Drawing.Size(501, 176);
-            this.dtEmployees.TabIndex = 98;
-            // 
             // pnlProfile
             // 
             this.pnlProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -232,8 +221,6 @@
             this.pnlProfile.Controls.Add(this.label15);
             this.pnlProfile.Controls.Add(this.lblPosition);
             this.pnlProfile.Controls.Add(this.label13);
-            this.pnlProfile.Controls.Add(this.lblMiddleName);
-            this.pnlProfile.Controls.Add(this.lblFirstName);
             this.pnlProfile.Controls.Add(this.lblLastName);
             this.pnlProfile.Controls.Add(this.label9);
             this.pnlProfile.Controls.Add(this.lblIDNumber);
@@ -316,41 +303,21 @@
             this.label13.TabIndex = 66;
             this.label13.Text = "POSITION:";
             // 
-            // lblMiddleName
-            // 
-            this.lblMiddleName.AutoSize = true;
-            this.lblMiddleName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiddleName.Location = new System.Drawing.Point(115, 94);
-            this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.Size = new System.Drawing.Size(93, 18);
-            this.lblMiddleName.TabIndex = 65;
-            this.lblMiddleName.Text = "MIDDLENAME";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(115, 76);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(86, 18);
-            this.lblFirstName.TabIndex = 64;
-            this.lblFirstName.Text = "FIRSTTNAME";
-            // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
             this.lblLastName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(115, 58);
+            this.lblLastName.Location = new System.Drawing.Point(172, 67);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(75, 18);
+            this.lblLastName.Size = new System.Drawing.Size(66, 18);
             this.lblLastName.TabIndex = 63;
-            this.lblLastName.Text = "LASTNAME";
+            this.lblLastName.Text = "Fullname";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(115, 40);
+            this.label9.Location = new System.Drawing.Point(115, 67);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 18);
             this.label9.TabIndex = 62;
@@ -360,7 +327,7 @@
             // 
             this.lblIDNumber.AutoSize = true;
             this.lblIDNumber.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDNumber.Location = new System.Drawing.Point(146, 22);
+            this.lblIDNumber.Location = new System.Drawing.Point(146, 49);
             this.lblIDNumber.Name = "lblIDNumber";
             this.lblIDNumber.Size = new System.Drawing.Size(21, 18);
             this.lblIDNumber.TabIndex = 61;
@@ -370,7 +337,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 22);
+            this.label3.Location = new System.Drawing.Point(115, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 18);
             this.label3.TabIndex = 60;
@@ -446,15 +413,23 @@
             this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            "",
+            "First Name",
+            "Middle Initial",
+            "Last Name",
+            "Employee ID"});
             this.cmbSearchBy.Location = new System.Drawing.Point(109, 74);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
             this.cmbSearchBy.TabIndex = 92;
+            this.cmbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cmbSearchBy_SelectedIndexChanged);
             // 
             // txtSearchBy
             // 
             this.txtSearchBy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearchBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchBy.Enabled = false;
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBy.Location = new System.Drawing.Point(236, 74);
             this.txtSearchBy.Name = "txtSearchBy";
@@ -540,17 +515,33 @@
             this.btnDeleteEmployee.Text = "DELETE";
             this.btnDeleteEmployee.UseVisualStyleBackColor = false;
             // 
+            // tblEmployee
+            // 
+            this.tblEmployee.AllowUserToAddRows = false;
+            this.tblEmployee.AllowUserToDeleteRows = false;
+            this.tblEmployee.AllowUserToOrderColumns = true;
+            this.tblEmployee.AllowUserToResizeColumns = false;
+            this.tblEmployee.AllowUserToResizeRows = false;
+            this.tblEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tblEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblEmployee.Location = new System.Drawing.Point(420, 106);
+            this.tblEmployee.Name = "tblEmployee";
+            this.tblEmployee.Size = new System.Drawing.Size(508, 176);
+            this.tblEmployee.TabIndex = 104;
+            this.tblEmployee.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblEmployee_CellContentDoubleClick);
+            // 
             // AdminEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 419);
+            this.Controls.Add(this.tblEmployee);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnEditEmployee);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.lblTotalEmployees);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.dtEmployees);
             this.Controls.Add(this.pnlProfile);
             this.Controls.Add(this.lblUSERTYPE);
             this.Controls.Add(this.label8);
@@ -568,10 +559,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminEmployeeForm";
             this.Text = "AdminEmployeeForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dtEmployees)).EndInit();
             this.pnlProfile.ResumeLayout(false);
             this.pnlProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,7 +582,6 @@
         private System.Windows.Forms.Label lblTotalEmployees;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.DataGridView dtEmployees;
         private System.Windows.Forms.Panel pnlProfile;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblBirthDate;
@@ -600,8 +590,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblMiddleName;
-        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblIDNumber;
@@ -621,5 +609,6 @@
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnDeleteEmployee;
+        private System.Windows.Forms.DataGridView tblEmployee;
     }
 }

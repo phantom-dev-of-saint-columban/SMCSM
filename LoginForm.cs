@@ -23,7 +23,9 @@ namespace SMCSM
         {
             if (csm.countSQL("select count(*)'countAll' from account where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'", "countAll") == "1")
             {
-                thisMainForm.callFormToPnlContainer(new AdminMainMenuForm());
+                thisMainForm.btnLogin.Visible = true;
+                thisMainForm.globalID = txtUsername.Text;
+                thisMainForm.callFormToPnlContainer(new AdminMainMenuForm(thisMainForm));
             }
             else { lblIncorrect.Visible = true; label1.ForeColor = Color.Red; label2.ForeColor = Color.Red; }
         }

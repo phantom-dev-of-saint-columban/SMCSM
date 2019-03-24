@@ -11,10 +11,11 @@ namespace SMCSM
 {
     public partial class AdminMainMenuForm : Form
     {
-        
-        public AdminMainMenuForm()
+        MainMenuForm mmf;
+        public AdminMainMenuForm(MainMenuForm mmf)
         {
             InitializeComponent();
+            this.mmf = mmf;
         }
         #region Dev's Methods
         public void callFormToPnlContainer(Form b)
@@ -37,9 +38,8 @@ namespace SMCSM
 
         private void msEmployee_Click(object sender, EventArgs e)
         {
-            AdminEmployeeForm aef = new AdminEmployeeForm();
+            AdminEmployeeForm aef = new AdminEmployeeForm(mmf.globalID);
             callFormToPnlContainer(aef);
-
         }
 
         private void msSupplier_Click(object sender, EventArgs e)
