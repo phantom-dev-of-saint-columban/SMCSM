@@ -57,23 +57,6 @@ namespace SMCSM
         #region
         private void fillEmpData(string a) 
         {
-            /*
-            MySqlDataReader reader = csm.sqlCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum from Employee where empno = '" + a + "'").ExecuteReader();
-            while (reader.Read())
-            {
-                lblIDNumber.Text = reader.GetString("EmpNo");
-                lblLastName.Text = reader.GetString("Fullname");
-                lblPosition.Text = reader.GetString("Position");
-                lblAddress.Text = reader.GetString("Address");
-                lblBirthDate.Text = reader.GetString("birthdate");
-                lblAge.Text = reader.GetString("age");
-                lblSex.Text = reader.GetString("sex");
-                lblCivilStatus.Text = reader.GetString("civilstatus");
-                lblContactNumber.Text = reader.GetString("ContactNum");
-                
-            }
-            csm.closeSql();
-            */
             try
             {
                 MySqlDataReader reader;
