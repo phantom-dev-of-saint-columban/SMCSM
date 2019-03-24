@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using KOTL;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 
 namespace SMCSM
@@ -56,7 +57,8 @@ namespace SMCSM
         #region
         private void fillEmpData(string a) 
         {
-            MySqlDataReader reader = csm.sqlCommand("Select concat(fname,' ',mname,' ',lname)as'Fullname',* from Employee where empno = '"+a+"'").ExecuteReader();
+            /*
+            MySqlDataReader reader = csm.sqlCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum from Employee where empno = '" + a + "'").ExecuteReader();
             while (reader.Read())
             {
                 lblIDNumber.Text = reader.GetString("EmpNo");
@@ -64,18 +66,49 @@ namespace SMCSM
                 lblPosition.Text = reader.GetString("Position");
                 lblAddress.Text = reader.GetString("Address");
                 lblBirthDate.Text = reader.GetString("birthdate");
-                int years = DateTime.Now.Year - int.Parse(reader.GetString("birthdate"));
-                lblAge.Text = years.ToString();
+                lblAge.Text = reader.GetString("age");
                 lblSex.Text = reader.GetString("sex");
                 lblCivilStatus.Text = reader.GetString("civilstatus");
                 lblContactNumber.Text = reader.GetString("ContactNum");
                 
             }
             csm.closeSql();
+            */
+            try
+            {
+                MySqlDataReader reader;
+                var _Result = csm.tblCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum,face from Employee where empno = '" + a + "'");
+                reader = _Result.Item2.ExecuteReader();
+                while (reader.Read())
+                {
+                    lblIDNumber.Text = reader.GetString("EmpNo");
+                    lblLastName.Text = reader.GetString("Fullname");
+                    lblPosition.Text = reader.GetString("Position");
+                    lblAddress.Text = reader.GetString("Address");
+                    lblBirthDate.Text = reader.GetString("birthdate");
+                    lblAge.Text = reader.GetString("age");
+                    lblSex.Text = reader.GetString("sex");
+                    lblCivilStatus.Text = reader.GetString("civilstatus");
+                    lblContactNumber.Text = reader.GetString("ContactNum");
+
+                    if (!DBNull.Value.Equals(_Result.Item1.Rows[0][9]))
+                    {
+                        picFace.Image = null;
+                        byte[] img = (byte[])_Result.Item1.Rows[0][9];
+                        MemoryStream ms = new MemoryStream(img);
+                        picFace.Image = Image.FromStream(ms);
+                        csm.disposeTableDtTable();
+                    }
+                }
+                csm.closeSql();
+            }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message, "Something's not right", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         private void fillTable() 
         {
-            tblEmployee.DataSource = csm.fillTable("select EmpNo, concat(Fname,' ',Lname)as'Full Name', Birthdate, Sex, Address, Contact from employee").Tables[0];
+            tblEmployee.DataSource = csm.fillTable("select EmpNo, concat(Fname,' ',Lname)as'Full Name', Birthdate, Sex, Address, ContactNum from employee").Tables[0];
+            lblTotalEmployees.Text = csm.countSQL("select count(*)'all' from employee","all");
         }
         #endregion
 

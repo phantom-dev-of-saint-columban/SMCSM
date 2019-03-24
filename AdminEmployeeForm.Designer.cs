@@ -52,7 +52,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblIDNumber = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pbEmployee = new System.Windows.Forms.PictureBox();
+            this.picFace = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUSERTYPE = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.tblEmployee = new System.Windows.Forms.DataGridView();
             this.pnlProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,7 +225,7 @@
             this.pnlProfile.Controls.Add(this.label9);
             this.pnlProfile.Controls.Add(this.lblIDNumber);
             this.pnlProfile.Controls.Add(this.label3);
-            this.pnlProfile.Controls.Add(this.pbEmployee);
+            this.pnlProfile.Controls.Add(this.picFace);
             this.pnlProfile.Controls.Add(this.label1);
             this.pnlProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlProfile.Location = new System.Drawing.Point(30, 106);
@@ -343,13 +343,13 @@
             this.label3.TabIndex = 60;
             this.label3.Text = "ID:";
             // 
-            // pbEmployee
+            // picFace
             // 
-            this.pbEmployee.Location = new System.Drawing.Point(6, 22);
-            this.pbEmployee.Name = "pbEmployee";
-            this.pbEmployee.Size = new System.Drawing.Size(103, 90);
-            this.pbEmployee.TabIndex = 59;
-            this.pbEmployee.TabStop = false;
+            this.picFace.Location = new System.Drawing.Point(6, 22);
+            this.picFace.Name = "picFace";
+            this.picFace.Size = new System.Drawing.Size(103, 90);
+            this.picFace.TabIndex = 59;
+            this.picFace.TabStop = false;
             // 
             // label1
             // 
@@ -561,7 +561,7 @@
             this.Text = "AdminEmployeeForm";
             this.pnlProfile.ResumeLayout(false);
             this.pnlProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -594,7 +594,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblIDNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pbEmployee;
+        private System.Windows.Forms.PictureBox picFace;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUSERTYPE;
         private System.Windows.Forms.Label label8;
