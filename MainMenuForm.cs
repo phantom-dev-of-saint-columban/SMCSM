@@ -12,7 +12,6 @@ namespace SMCSM
     public partial class MainMenuForm : Form
     {
         public string globalID = "";
-
         public MainMenuForm()
         {
             InitializeComponent();
@@ -33,5 +32,19 @@ namespace SMCSM
             b.Show();
         }
         #endregion
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to Log Out?", "Logging Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                LoginForm lf = new LoginForm(this);
+                callFormToPnlContainer(lf);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
     }
 }

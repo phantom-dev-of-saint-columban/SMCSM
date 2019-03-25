@@ -50,6 +50,7 @@
             this.btnLogin.Text = "LOGOUT";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Visible = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pnlContainer
             // 

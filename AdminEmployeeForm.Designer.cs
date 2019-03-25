@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminEmployeeForm));
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.lblCivilStatus = new System.Windows.Forms.Label();
@@ -56,38 +57,34 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblUSERTYPE = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbSearchBy = new System.Windows.Forms.ComboBox();
             this.txtSearchBy = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.llblDate = new System.Windows.Forms.Label();
-            this.lblDay = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.tblEmployee = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblContactNumber
             // 
             this.lblContactNumber.AutoSize = true;
-            this.lblContactNumber.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactNumber.Location = new System.Drawing.Point(138, 232);
+            this.lblContactNumber.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactNumber.Location = new System.Drawing.Point(153, 233);
             this.lblContactNumber.Name = "lblContactNumber";
-            this.lblContactNumber.Size = new System.Drawing.Size(123, 18);
+            this.lblContactNumber.Size = new System.Drawing.Size(0, 18);
             this.lblContactNumber.TabIndex = 79;
-            this.lblContactNumber.Text = "CONTACT NUMBER";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(3, 232);
+            this.label25.Location = new System.Drawing.Point(18, 233);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(129, 18);
             this.label25.TabIndex = 78;
@@ -96,18 +93,17 @@
             // lblCivilStatus
             // 
             this.lblCivilStatus.AutoSize = true;
-            this.lblCivilStatus.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCivilStatus.Location = new System.Drawing.Point(100, 214);
+            this.lblCivilStatus.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCivilStatus.Location = new System.Drawing.Point(153, 215);
             this.lblCivilStatus.Name = "lblCivilStatus";
-            this.lblCivilStatus.Size = new System.Drawing.Size(86, 18);
+            this.lblCivilStatus.Size = new System.Drawing.Size(0, 18);
             this.lblCivilStatus.TabIndex = 77;
-            this.lblCivilStatus.Text = "CIVIL STATUS";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(3, 214);
+            this.label23.Location = new System.Drawing.Point(56, 215);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 18);
             this.label23.TabIndex = 76;
@@ -118,7 +114,7 @@
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(54, 44);
+            this.lblID.Location = new System.Drawing.Point(96, 44);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(19, 14);
             this.lblID.TabIndex = 96;
@@ -127,18 +123,17 @@
             // lblSex
             // 
             this.lblSex.AutoSize = true;
-            this.lblSex.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.Location = new System.Drawing.Point(38, 196);
+            this.lblSex.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.Location = new System.Drawing.Point(153, 197);
             this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(30, 18);
+            this.lblSex.Size = new System.Drawing.Size(0, 18);
             this.lblSex.TabIndex = 75;
-            this.lblSex.Text = "SEX";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(3, 196);
+            this.label21.Location = new System.Drawing.Point(113, 197);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(34, 18);
             this.label21.TabIndex = 74;
@@ -150,12 +145,13 @@
             this.btnEditEmployee.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnEditEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEmployee.Location = new System.Drawing.Point(782, 353);
+            this.btnEditEmployee.Location = new System.Drawing.Point(911, 353);
             this.btnEditEmployee.Name = "btnEditEmployee";
             this.btnEditEmployee.Size = new System.Drawing.Size(70, 36);
             this.btnEditEmployee.TabIndex = 102;
             this.btnEditEmployee.Text = "EDIT";
             this.btnEditEmployee.UseVisualStyleBackColor = false;
+            this.btnEditEmployee.Click += new System.EventHandler(this.btnEditEmployee_Click);
             // 
             // btnAddEmployee
             // 
@@ -163,7 +159,7 @@
             this.btnAddEmployee.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.Location = new System.Drawing.Point(630, 353);
+            this.btnAddEmployee.Location = new System.Drawing.Point(759, 353);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(146, 36);
             this.btnAddEmployee.TabIndex = 101;
@@ -176,7 +172,7 @@
             this.lblTotalEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTotalEmployees.AutoSize = true;
             this.lblTotalEmployees.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalEmployees.Location = new System.Drawing.Point(549, 285);
+            this.lblTotalEmployees.Location = new System.Drawing.Point(591, 297);
             this.lblTotalEmployees.Name = "lblTotalEmployees";
             this.lblTotalEmployees.Size = new System.Drawing.Size(46, 18);
             this.lblTotalEmployees.TabIndex = 100;
@@ -185,19 +181,18 @@
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(44, 178);
+            this.lblAge.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(153, 179);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(33, 18);
+            this.lblAge.Size = new System.Drawing.Size(0, 18);
             this.lblAge.TabIndex = 73;
-            this.lblAge.Text = "AGE";
             // 
             // label27
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(424, 285);
+            this.label27.Location = new System.Drawing.Point(466, 297);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(126, 18);
             this.label27.TabIndex = 99;
@@ -228,7 +223,7 @@
             this.pnlProfile.Controls.Add(this.picFace);
             this.pnlProfile.Controls.Add(this.label1);
             this.pnlProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlProfile.Location = new System.Drawing.Point(30, 106);
+            this.pnlProfile.Location = new System.Drawing.Point(72, 106);
             this.pnlProfile.Name = "pnlProfile";
             this.pnlProfile.Size = new System.Drawing.Size(384, 283);
             this.pnlProfile.TabIndex = 97;
@@ -237,7 +232,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(3, 178);
+            this.label19.Location = new System.Drawing.Point(109, 179);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(38, 18);
             this.label19.TabIndex = 72;
@@ -246,18 +241,17 @@
             // lblBirthDate
             // 
             this.lblBirthDate.AutoSize = true;
-            this.lblBirthDate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthDate.Location = new System.Drawing.Point(81, 160);
+            this.lblBirthDate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthDate.Location = new System.Drawing.Point(153, 161);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(75, 18);
+            this.lblBirthDate.Size = new System.Drawing.Size(0, 18);
             this.lblBirthDate.TabIndex = 71;
-            this.lblBirthDate.Text = "BIRTHDATE";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 160);
+            this.label17.Location = new System.Drawing.Point(68, 161);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(79, 18);
             this.label17.TabIndex = 70;
@@ -266,18 +260,17 @@
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(77, 142);
+            this.lblAddress.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(153, 143);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(64, 18);
+            this.lblAddress.Size = new System.Drawing.Size(0, 18);
             this.lblAddress.TabIndex = 69;
-            this.lblAddress.Text = "ADDRESS";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 142);
+            this.label15.Location = new System.Drawing.Point(79, 143);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(68, 18);
             this.label15.TabIndex = 68;
@@ -286,18 +279,17 @@
             // lblPosition
             // 
             this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(81, 124);
+            this.lblPosition.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.Location = new System.Drawing.Point(153, 125);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(68, 18);
+            this.lblPosition.Size = new System.Drawing.Size(0, 18);
             this.lblPosition.TabIndex = 67;
-            this.lblPosition.Text = "POSITION";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 124);
+            this.label13.Location = new System.Drawing.Point(75, 125);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(72, 18);
             this.label13.TabIndex = 66;
@@ -306,18 +298,17 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(172, 67);
+            this.lblLastName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(180, 90);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(66, 18);
+            this.lblLastName.Size = new System.Drawing.Size(0, 18);
             this.lblLastName.TabIndex = 63;
-            this.lblLastName.Text = "Fullname";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(115, 67);
+            this.label9.Location = new System.Drawing.Point(123, 90);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 18);
             this.label9.TabIndex = 62;
@@ -326,18 +317,17 @@
             // lblIDNumber
             // 
             this.lblIDNumber.AutoSize = true;
-            this.lblIDNumber.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDNumber.Location = new System.Drawing.Point(146, 49);
+            this.lblIDNumber.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDNumber.Location = new System.Drawing.Point(180, 72);
             this.lblIDNumber.Name = "lblIDNumber";
-            this.lblIDNumber.Size = new System.Drawing.Size(21, 18);
+            this.lblIDNumber.Size = new System.Drawing.Size(0, 18);
             this.lblIDNumber.TabIndex = 61;
-            this.lblIDNumber.Text = "ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 49);
+            this.label3.Location = new System.Drawing.Point(149, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 18);
             this.label3.TabIndex = 60;
@@ -345,9 +335,11 @@
             // 
             // picFace
             // 
-            this.picFace.Location = new System.Drawing.Point(6, 22);
+            this.picFace.Image = ((System.Drawing.Image)(resources.GetObject("picFace.Image")));
+            this.picFace.Location = new System.Drawing.Point(17, 22);
             this.picFace.Name = "picFace";
-            this.picFace.Size = new System.Drawing.Size(103, 90);
+            this.picFace.Size = new System.Drawing.Size(100, 100);
+            this.picFace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFace.TabIndex = 59;
             this.picFace.TabStop = false;
             // 
@@ -366,7 +358,7 @@
             this.lblUSERTYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUSERTYPE.AutoSize = true;
             this.lblUSERTYPE.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUSERTYPE.Location = new System.Drawing.Point(82, 30);
+            this.lblUSERTYPE.Location = new System.Drawing.Point(124, 30);
             this.lblUSERTYPE.Name = "lblUSERTYPE";
             this.lblUSERTYPE.Size = new System.Drawing.Size(58, 14);
             this.lblUSERTYPE.TabIndex = 87;
@@ -377,35 +369,26 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 44);
+            this.label8.Location = new System.Drawing.Point(69, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(21, 14);
             this.label8.TabIndex = 95;
             this.label8.Text = "ID:";
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(612, 74);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 23);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "LIST OF EMPLOYEES";
-            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(366, 74);
+            this.btnSearch.Location = new System.Drawing.Point(408, 74);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(66, 26);
             this.btnSearch.TabIndex = 93;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbSearchBy
             // 
@@ -419,7 +402,7 @@
             "Middle Initial",
             "Last Name",
             "Employee ID"});
-            this.cmbSearchBy.Location = new System.Drawing.Point(109, 74);
+            this.cmbSearchBy.Location = new System.Drawing.Point(151, 74);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
             this.cmbSearchBy.TabIndex = 92;
@@ -431,76 +414,33 @@
             this.txtSearchBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchBy.Enabled = false;
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBy.Location = new System.Drawing.Point(236, 74);
+            this.txtSearchBy.Location = new System.Drawing.Point(278, 74);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(127, 26);
             this.txtSearchBy.TabIndex = 86;
+            this.txtSearchBy.TextChanged += new System.EventHandler(this.txtSearchBy_TextChanged);
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 78);
+            this.label7.Location = new System.Drawing.Point(73, 78);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 18);
             this.label7.TabIndex = 85;
             this.label7.Text = "SEARCH BY:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(853, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 14);
-            this.label4.TabIndex = 88;
-            this.label4.Text = "DATE:";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 30);
+            this.label2.Location = new System.Drawing.Point(66, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 14);
             this.label2.TabIndex = 84;
             this.label2.Text = "WELCOME";
-            // 
-            // llblDate
-            // 
-            this.llblDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.llblDate.AutoSize = true;
-            this.llblDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblDate.Location = new System.Drawing.Point(895, 34);
-            this.llblDate.Name = "llblDate";
-            this.llblDate.Size = new System.Drawing.Size(33, 14);
-            this.llblDate.TabIndex = 89;
-            this.llblDate.Text = "DATE";
-            // 
-            // lblDay
-            // 
-            this.lblDay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDay.AutoSize = true;
-            this.lblDay.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.Location = new System.Drawing.Point(895, 50);
-            this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(27, 14);
-            this.lblDay.TabIndex = 90;
-            this.lblDay.Text = "DAY";
-            // 
-            // lblTime
-            // 
-            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(895, 64);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(33, 14);
-            this.lblTime.TabIndex = 91;
-            this.lblTime.Text = "TIME";
             // 
             // btnDeleteEmployee
             // 
@@ -508,35 +448,47 @@
             this.btnDeleteEmployee.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(858, 353);
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(987, 353);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
             this.btnDeleteEmployee.Size = new System.Drawing.Size(70, 36);
             this.btnDeleteEmployee.TabIndex = 103;
             this.btnDeleteEmployee.Text = "DELETE";
             this.btnDeleteEmployee.UseVisualStyleBackColor = false;
+            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // tblEmployee
             // 
             this.tblEmployee.AllowUserToAddRows = false;
             this.tblEmployee.AllowUserToDeleteRows = false;
             this.tblEmployee.AllowUserToOrderColumns = true;
-            this.tblEmployee.AllowUserToResizeColumns = false;
-            this.tblEmployee.AllowUserToResizeRows = false;
-            this.tblEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tblEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblEmployee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tblEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblEmployee.Location = new System.Drawing.Point(420, 106);
+            this.tblEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblEmployee.Location = new System.Drawing.Point(3, 20);
             this.tblEmployee.Name = "tblEmployee";
-            this.tblEmployee.Size = new System.Drawing.Size(508, 176);
+            this.tblEmployee.Size = new System.Drawing.Size(592, 165);
             this.tblEmployee.TabIndex = 104;
             this.tblEmployee.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblEmployee_CellContentDoubleClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.tblEmployee);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(462, 106);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(598, 188);
+            this.groupBox1.TabIndex = 105;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "List of Employee";
             // 
             // AdminEmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 419);
-            this.Controls.Add(this.tblEmployee);
+            this.ClientSize = new System.Drawing.Size(1127, 419);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnEditEmployee);
             this.Controls.Add(this.btnAddEmployee);
@@ -545,16 +497,11 @@
             this.Controls.Add(this.pnlProfile);
             this.Controls.Add(this.lblUSERTYPE);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbSearchBy);
             this.Controls.Add(this.txtSearchBy);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.llblDate);
-            this.Controls.Add(this.lblDay);
-            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.btnDeleteEmployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminEmployeeForm";
@@ -563,6 +510,7 @@
             this.pnlProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,17 +546,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUSERTYPE;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmbSearchBy;
         private System.Windows.Forms.TextBox txtSearchBy;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label llblDate;
-        private System.Windows.Forms.Label lblDay;
-        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.DataGridView tblEmployee;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

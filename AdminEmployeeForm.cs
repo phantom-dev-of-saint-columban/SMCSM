@@ -15,7 +15,8 @@ namespace SMCSM
 {
     public partial class AdminEmployeeForm : Form
     {
-        CallSqlModule csm = new CallSqlModule();
+        CallSqlModule csm = new CallSqlModule(); 
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminEmployeeForm));
 
         public AdminEmployeeForm(string UserID)
         {
@@ -32,9 +33,9 @@ namespace SMCSM
             txtSearchBy.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection ad = new AutoCompleteStringCollection();
             MySqlDataReader reader = csm.sqlCommand("Select * from Employee").ExecuteReader();
+            ad.Clear();
             while (reader.Read())
             {
-                ad.Clear();
                 switch (a) 
                 {
                     case "First Name":
@@ -55,13 +56,14 @@ namespace SMCSM
             txtSearchBy.AutoCompleteCustomSource = ad;
         }
         #region
-        private void fillEmpData(string a) 
+        public void fillEmpData(string a) 
         {
             try
             {
                 MySqlDataReader reader;
-                var _Result = csm.tblCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum,face from Employee where empno = '" + a + "'");
+                var _Result = csm.tblCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum,face from Employee where empno = '" + a + "' or fname = '" + a + "' or mname = '" + a + "' or lname = '" + a + "'");
                 reader = _Result.Item2.ExecuteReader();
+                performClear();
                 while (reader.Read())
                 {
                     lblIDNumber.Text = reader.GetString("EmpNo");
@@ -88,16 +90,36 @@ namespace SMCSM
             catch (Exception ex)
             { MessageBox.Show(ex.Message, "Something's not right", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-        private void fillTable() 
+        public void fillTable() 
         {
             tblEmployee.DataSource = csm.fillTable("select EmpNo, concat(Fname,' ',Lname)as'Full Name', Birthdate, Sex, Address, ContactNum from employee").Tables[0];
             lblTotalEmployees.Text = csm.countSQL("select count(*)'all' from employee","all");
+        }
+        private void performClear() 
+        {
+            lblIDNumber.Text = "";
+            lblLastName.Text = "";
+            lblPosition.Text = "";
+            lblAddress.Text = "";
+            lblBirthDate.Text = "";
+            lblAge.Text = "";
+            lblSex.Text = "";
+            lblCivilStatus.Text = "";
+            lblContactNumber.Text = "";
+
+            picFace.Image = ((System.Drawing.Image)(resources.GetObject("picFace.Image")));
+        }
+        private void performDelete() 
+        {
+            MessageBox.Show(csm.saveInto("delete from employee where empNo ='"+lblIDNumber.Text+"'"),"Delete",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            performClear();
+            fillTable();
         }
         #endregion
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            AddNewEmployee ane = new AddNewEmployee();
+            AddNewEmployee ane = new AddNewEmployee(this);
             ane.ShowDialog();
         }
 
@@ -114,6 +136,33 @@ namespace SMCSM
         private void tblEmployee_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             fillEmpData(tblEmployee.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            fillEmpData(txtSearchBy.Text);
+        }
+
+        private void txtSearchBy_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearchBy.Text != "")
+            {
+                btnSearch.Enabled = true;
+            }
+            else { btnSearch.Enabled = false; }
+        }
+
+        private void btnEditEmployee_Click(object sender, EventArgs e)
+        {
+            AddNewEmployee ane = new AddNewEmployee(this);
+            ane.retrieveForEdit(lblIDNumber.Text);
+            ane.btnSave.Text = "UPDATE";
+            ane.ShowDialog();
+        }
+
+        private void btnDeleteEmployee_Click(object sender, EventArgs e)
+        {
+            performDelete();
         }
     }
 }

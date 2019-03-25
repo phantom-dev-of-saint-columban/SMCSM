@@ -90,6 +90,7 @@
             this.btnCancel.TabIndex = 75;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -463,6 +464,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
             this.Name = "AddNewEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Employee";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -476,7 +478,6 @@
 
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox picEmployee;
@@ -505,5 +506,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnSave;
     }
 }
