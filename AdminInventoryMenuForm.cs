@@ -38,5 +38,11 @@ namespace SMCSM
             AdminInventorySalesForm aisf = new AdminInventorySalesForm();
             callFormToPnlContainer(aisf);
         }
+
+        private void msInventoryStockReturn_Click(object sender, EventArgs e)
+        {
+            AdminInventoryStockReturnForm aisrf = new AdminInventoryStockReturnForm();
+            callFormToPnlContainer(aisrf);
+        }
     }
 }

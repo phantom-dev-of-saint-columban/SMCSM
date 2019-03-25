@@ -102,6 +102,7 @@
             this.msUserAccount.Padding = new System.Windows.Forms.Padding(50, 0, 4, 0);
             this.msUserAccount.Size = new System.Drawing.Size(192, 27);
             this.msUserAccount.Text = "USER ACCOUNT";
+            this.msUserAccount.Click += new System.EventHandler(this.msUserAccount_Click);
             // 
             // AdminMainMenuForm
             // 

@@ -69,6 +69,7 @@
             this.msInventoryStockReturn.Padding = new System.Windows.Forms.Padding(200, 0, 4, 0);
             this.msInventoryStockReturn.Size = new System.Drawing.Size(337, 27);
             this.msInventoryStockReturn.Text = "STOCK RETURN";
+            this.msInventoryStockReturn.Click += new System.EventHandler(this.msInventoryStockReturn_Click);
             // 
             // menuStrip1
             // 

@@ -44,7 +44,14 @@ namespace SMCSM
 
         private void msSupplier_Click(object sender, EventArgs e)
         {
+            AdminSupplierForm asf = new AdminSupplierForm();
+            callFormToPnlContainer(asf);
+        }
 
+        private void msUserAccount_Click(object sender, EventArgs e)
+        {
+            AdminUserAccountMenu auam = new AdminUserAccountMenu();
+            callFormToPnlContainer(auam);
         }
     }
 }

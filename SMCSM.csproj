@@ -56,6 +56,12 @@
     <Compile Include="AddNewEmployee.Designer.cs">
       <DependentUpon>AddNewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUser.Designer.cs">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +86,35 @@
     <Compile Include="AdminInventoryStockInForm.Designer.cs">
       <DependentUpon>AdminInventoryStockInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminInventoryStockReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminInventoryStockReturnForm.Designer.cs">
+      <DependentUpon>AdminInventoryStockReturnForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMainMenuForm.Designer.cs">
       <DependentUpon>AdminMainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSupplierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSupplierForm.Designer.cs">
+      <DependentUpon>AdminSupplierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccountForm.Designer.cs">
+      <DependentUpon>UserAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserAccountMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUserAccountMenu.Designer.cs">
+      <DependentUpon>AdminUserAccountMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="CallSqlModule.cs" />
     <Compile Include="LoginForm.cs">
@@ -101,8 +131,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAccountUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccountUserForm.Designer.cs">
+      <DependentUpon>UserAccountUserForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNewEmployee.resx">
       <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewUser.resx">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminEmployeeForm.resx">
       <DependentUpon>AdminEmployeeForm.cs</DependentUpon>
@@ -116,8 +155,20 @@
     <EmbeddedResource Include="AdminInventoryStockInForm.resx">
       <DependentUpon>AdminInventoryStockInForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminInventoryStockReturnForm.resx">
+      <DependentUpon>AdminInventoryStockReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMainMenuForm.resx">
       <DependentUpon>AdminMainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSupplierForm.resx">
+      <DependentUpon>AdminSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccountForm.resx">
+      <DependentUpon>UserAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserAccountMenu.resx">
+      <DependentUpon>AdminUserAccountMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -134,6 +185,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserAccountUserForm.resx">
+      <DependentUpon>UserAccountUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
