@@ -143,6 +143,7 @@
             // 
             this.btnEditEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditEmployee.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnEditEmployee.Enabled = false;
             this.btnEditEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEmployee.Location = new System.Drawing.Point(911, 353);
@@ -446,6 +447,7 @@
             // 
             this.btnDeleteEmployee.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDeleteEmployee.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnDeleteEmployee.Enabled = false;
             this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteEmployee.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteEmployee.Location = new System.Drawing.Point(987, 353);
@@ -469,7 +471,7 @@
             this.tblEmployee.Name = "tblEmployee";
             this.tblEmployee.Size = new System.Drawing.Size(592, 165);
             this.tblEmployee.TabIndex = 104;
-            this.tblEmployee.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblEmployee_CellContentDoubleClick);
+            this.tblEmployee.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblEmployee_CellDoubleClick);
             // 
             // groupBox1
             // 

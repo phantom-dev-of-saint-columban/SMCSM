@@ -34,7 +34,6 @@ namespace SMCSM
             txtAddress.Text = "";
             lblAge.Text = "-";
             txtContactNumber.Text = "+693";
-
         }
         private void performSave()
         {

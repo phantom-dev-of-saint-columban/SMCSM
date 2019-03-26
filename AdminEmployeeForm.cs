@@ -94,6 +94,8 @@ namespace SMCSM
         {
             tblEmployee.DataSource = csm.fillTable("select EmpNo, concat(Fname,' ',Lname)as'Full Name', Birthdate, Sex, Address, ContactNum from employee").Tables[0];
             lblTotalEmployees.Text = csm.countSQL("select count(*)'all' from employee","all");
+            btnDeleteEmployee.Enabled = false;
+            btnEditEmployee.Enabled = false;
         }
         private void performClear() 
         {
@@ -130,12 +132,7 @@ namespace SMCSM
                 autoCompleteSearch(cmbSearchBy.Text);
                 txtSearchBy.Enabled = true;
             }
-            
-        }
 
-        private void tblEmployee_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            fillEmpData(tblEmployee.CurrentRow.Cells[0].Value.ToString());
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -163,6 +160,15 @@ namespace SMCSM
         private void btnDeleteEmployee_Click(object sender, EventArgs e)
         {
             performDelete();
+            performClear();
+        }
+
+        private void tblEmployee_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            fillEmpData(tblEmployee.CurrentRow.Cells[0].Value.ToString());
+
+            btnEditEmployee.Enabled = true;
+            btnDeleteEmployee.Enabled = true;
         }
     }
 }
