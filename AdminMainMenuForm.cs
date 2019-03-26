@@ -50,7 +50,7 @@ namespace SMCSM
 
         private void msUserAccount_Click(object sender, EventArgs e)
         {
-            AdminUserAccountMenu auam = new AdminUserAccountMenu();
+            AdminUserAccountMenu auam = new AdminUserAccountMenu(mmf);
             callFormToPnlContainer(auam);
         }
     }

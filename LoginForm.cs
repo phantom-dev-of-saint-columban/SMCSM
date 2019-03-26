@@ -25,6 +25,7 @@ namespace SMCSM
             {
                 thisMainForm.btnLogin.Visible = true;
                 thisMainForm.globalID = txtUsername.Text;
+                thisMainForm._username = txtUsername.Text; thisMainForm._password = txtPassword.Text;
                 thisMainForm.callFormToPnlContainer(new AdminMainMenuForm(thisMainForm));
             }
             else { lblIncorrect.Visible = true; label1.ForeColor = Color.Red; label2.ForeColor = Color.Red; }
@@ -51,7 +52,7 @@ namespace SMCSM
 
         private void lblForgotPassword_Click(object sender, EventArgs e)
         {
-
+            using(ForgotPassworUsername fpu = new ForgotPassworUsername()){fpu.ShowDialog();}
         }
         #endregion
 

@@ -53,6 +53,7 @@
             this.btnChangePassword.TabIndex = 36;
             this.btnChangePassword.Text = "CHANGE PASSWORD";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnShowPassword
             // 
@@ -66,6 +67,7 @@
             this.btnShowPassword.TabIndex = 35;
             this.btnShowPassword.Text = "SHOW PASSWORD";
             this.btnShowPassword.UseVisualStyleBackColor = false;
+            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
             // lblUsername
             // 

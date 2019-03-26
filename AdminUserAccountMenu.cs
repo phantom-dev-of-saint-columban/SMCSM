@@ -11,9 +11,11 @@ namespace SMCSM
 {
     public partial class AdminUserAccountMenu : Form
     {
-        public AdminUserAccountMenu()
+        MainMenuForm mmf;
+        public AdminUserAccountMenu(MainMenuForm mmf)
         {
             InitializeComponent();
+            this.mmf = mmf;
         }
         #region Dev's Method
         public void callFormToPnlContainer(Form b)
@@ -30,7 +32,8 @@ namespace SMCSM
 
         private void msUserAccountMyAccount_Click(object sender, EventArgs e)
         {
-            UserAccountForm uaf = new UserAccountForm();
+            UserAccountForm uaf = new UserAccountForm(mmf);
+            uaf.getUsername();
             callFormToPnlContainer(uaf);
         }
 

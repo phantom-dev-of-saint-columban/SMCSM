@@ -47,7 +47,7 @@ namespace SMCSM
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(csm.saveInto("delete from useraccount where accno = '"+tblUserAccount.CurrentRow.Cells[0].Value.ToString()+"'"), "Deleting");
+            MessageBox.Show(csm.saveInto("delete from useraccount where username = '"+tblUserAccount.CurrentRow.Cells[0].Value.ToString()+"'"), "Deleting");
             fillTable();
         }
 

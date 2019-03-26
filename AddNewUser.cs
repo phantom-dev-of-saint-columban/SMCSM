@@ -31,22 +31,32 @@ namespace SMCSM
         }
         private void performSave() 
         {
-            MessageBox.Show(csm.saveInto("insert into useraccount (Accno, Name, Username, Password,Usertype) values ('"+lblAccNo.Text+"','"+txtName.Text+"','"+txtUsername.Text+"','"+txtPassword.Text+"','"+cmbUserType.Text+"')"),"Saving");
+            try 
+            {
+                MessageBox.Show(csm.saveInto("insert into useraccount (Name, Username, Password,Usertype,question,answer) values ('" + txtName.Text + "','" + txtUsername.Text + "','" + txtPassword.Text + "','" + cmbUserType.Text + "','"+txtQuestion.Text+"','"+txtAnswer.Text+"')"), "Saving");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message,"Invalid Username"); }
         }
-        private void performUpdate() 
+        private void performUpdate()
         {
-            MessageBox.Show(csm.saveInto("UPDATE useraccount set name = '"+txtName.Text+"', Username = '"+txtUsername.Text+"',password= '"+txtPassword.Text+"',usertype= '"+cmbUserType.Text+"' where accno = '"+lblAccNo.Text+"'"), "Updating");
+            try
+            {
+                MessageBox.Show(csm.saveInto("UPDATE useraccount set name = '" + txtName.Text + "', Username = '" + txtUsername.Text + "',password= '" + txtPassword.Text + "',usertype= '" + cmbUserType.Text + "',question = '"+txtQuestion.Text+"',answer = '"+txtAnswer.Text+"' where username = '" + lblAccNo.Text + "'"), "Updating");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message,"Invalid Username",MessageBoxButtons.OK,MessageBoxIcon.Error); };
         }
         public void fillDataField(string a) 
         {
-            MySqlDataReader reader = csm.sqlCommand("select * from useraccount where accno = '"+a+"'").ExecuteReader();
+            MySqlDataReader reader = csm.sqlCommand("select * from useraccount where username = '"+a+"'").ExecuteReader();
             while (reader.Read()) 
             {
-                lblAccNo.Text = reader.GetString("accno");
+                lblAccNo.Text = reader.GetString("username");
                 txtName.Text = reader.GetString("Name");
                 txtPassword.Text = reader.GetString("Password");
                 txtUsername.Text = reader.GetString("username");
                 cmbUserType.Text = reader.GetString("usertype");
+                txtQuestion.Text = reader.GetString("Question");
+                txtAnswer.Text = reader.GetString("Answer");
             }
         }
         

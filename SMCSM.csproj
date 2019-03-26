@@ -104,6 +104,24 @@
     <Compile Include="AdminSupplierForm.Designer.cs">
       <DependentUpon>AdminSupplierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPasswordSecurityQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordSecurityQuest.Designer.cs">
+      <DependentUpon>ForgotPasswordSecurityQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassworUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassworUsername.Designer.cs">
+      <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccountChangePassword.Designer.cs">
+      <DependentUpon>UserAccountChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +181,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSupplierForm.resx">
       <DependentUpon>AdminSupplierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordSecurityQuest.resx">
+      <DependentUpon>ForgotPasswordSecurityQuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassworUsername.resx">
+      <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccountChangePassword.resx">
+      <DependentUpon>UserAccountChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccountForm.resx">
       <DependentUpon>UserAccountForm.cs</DependentUpon>

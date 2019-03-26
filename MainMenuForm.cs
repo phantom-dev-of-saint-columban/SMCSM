@@ -12,6 +12,9 @@ namespace SMCSM
     public partial class MainMenuForm : Form
     {
         public string globalID = "";
+
+        public string _username = "",_password = "";
+
         public MainMenuForm()
         {
             InitializeComponent();
