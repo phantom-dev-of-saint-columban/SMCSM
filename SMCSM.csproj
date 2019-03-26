@@ -116,6 +116,12 @@
     <Compile Include="ForgotPassworUsername.Designer.cs">
       <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockClerkMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockClerkMainMenu.Designer.cs">
+      <DependentUpon>StockClerkMainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAccountChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassworUsername.resx">
       <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockClerkMainMenu.resx">
+      <DependentUpon>StockClerkMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccountChangePassword.resx">
       <DependentUpon>UserAccountChangePassword.cs</DependentUpon>

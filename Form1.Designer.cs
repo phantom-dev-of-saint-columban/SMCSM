@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timeClock = new System.Windows.Forms.Timer(this.components);
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -99,12 +106,68 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.Controls.Add(this.lblUser);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.lblTime);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Location = new System.Drawing.Point(0, 435);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1116, 30);
             this.panel2.TabIndex = 0;
+            // 
+            // timeClock
+            // 
+            this.timeClock.Tick += new System.EventHandler(this.timeClock_Tick);
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblTime.Location = new System.Drawing.Point(1022, 7);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(82, 17);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "hh-mm-ss tt";
+            // 
+            // lblDate
+            // 
+            this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblDate.Location = new System.Drawing.Point(934, 7);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(82, 17);
+            this.lblDate.TabIndex = 5;
+            this.lblDate.Text = "MM/dd/yyyy";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(12, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Welcome:";
+            // 
+            // lblUser
+            // 
+            this.lblUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblUser.Location = new System.Drawing.Point(96, 7);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(36, 17);
+            this.lblUser.TabIndex = 7;
+            this.lblUser.Text = "user";
             // 
             // MainMenuForm
             // 
@@ -121,6 +184,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -133,6 +198,11 @@
         public System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timeClock;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblUser;
     }
 }
 

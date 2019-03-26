@@ -19,9 +19,34 @@ namespace SMCSM
             thisMainForm = a;
         }
         #region Dev's Method
+        private void userAuthenticate() 
+        {
+            switch(csm.countSQL("select usertype from useraccount where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'", "usertype"))
+            {
+                case "ADMIN":
+                    thisMainForm.callFormToPnlContainer(new AdminMainMenuForm(thisMainForm));
+                break;
+                case "CASHIER":
+                    MessageBox.Show("Cashier");
+                break;
+                case "SUPERVISOR":
+                    MessageBox.Show("Supervisor");
+                break;
+                case "STOCK CLERK":
+                    thisMainForm.callFormToPnlContainer(new StockClerkMainMenu());
+                break;
+                default:
+                    lblIncorrect.Visible = true; label1.ForeColor = Color.Red; label2.ForeColor = Color.Red;
+                break;
+            }
+            thisMainForm.btnLogin.Visible = true;
+            thisMainForm.globalID = txtUsername.Text;
+            thisMainForm._username = txtUsername.Text; thisMainForm._password = txtPassword.Text;
+            thisMainForm.lblUser.Text = csm.countSQL("select Name from useraccount where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'", "Name");
+        }
         private void performLogin() 
         {
-            if (csm.countSQL("select count(*)'countAll' from account where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'", "countAll") == "1")
+            if (csm.countSQL("select count(*)'countAll' from useraccount where username = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'", "countAll") == "1")
             {
                 thisMainForm.btnLogin.Visible = true;
                 thisMainForm.globalID = txtUsername.Text;
@@ -34,7 +59,8 @@ namespace SMCSM
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            performLogin();
+            //performLogin();
+            userAuthenticate();
         }
 
         #region lblForgot Region
