@@ -62,6 +62,12 @@
     <Compile Include="AddNewUser.Designer.cs">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSupplier.Designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="ForgotPassworUsername.Designer.cs">
       <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockClerkInventoryMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockClerkInventoryMenu.Designer.cs">
+      <DependentUpon>StockClerkInventoryMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockClerkMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,9 @@
     <EmbeddedResource Include="AddNewUser.resx">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminEmployeeForm.resx">
       <DependentUpon>AdminEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassworUsername.resx">
       <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockClerkInventoryMenu.resx">
+      <DependentUpon>StockClerkInventoryMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockClerkMainMenu.resx">
       <DependentUpon>StockClerkMainMenu.cs</DependentUpon>

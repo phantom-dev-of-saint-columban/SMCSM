@@ -134,7 +134,7 @@ namespace KOTL
             {
                 myconn.Open();
                 myreader = SelectCommand.ExecuteReader();
-                message = "Saved Sucessful";
+                message = "Sucessful";
                 myconn.Close();
             }
             catch (Exception ex)

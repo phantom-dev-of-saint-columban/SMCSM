@@ -402,7 +402,8 @@
             "First Name",
             "Middle Initial",
             "Last Name",
-            "Employee ID"});
+            "Employee ID",
+            "Position"});
             this.cmbSearchBy.Location = new System.Drawing.Point(151, 74);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);

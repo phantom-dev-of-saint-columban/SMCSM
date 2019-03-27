@@ -26,7 +26,7 @@ namespace SMCSM
             lblUSERTYPE.Text = csm.countSQL("select concat(fname, ' ',Lname)as'Fullname' from employee em inner join account ac on em.empNo = ac.empID where username = '"+UserID+"'","fullname");
             lblID.Text = csm.countSQL("select EMPID from account where username = '" + UserID + "'", "empID");
         }
-
+        #region
         private void autoCompleteSearch(string a)
         {
             txtSearchBy.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -36,7 +36,7 @@ namespace SMCSM
             ad.Clear();
             while (reader.Read())
             {
-                switch (a) 
+                switch (a)
                 {
                     case "First Name":
                         ad.Add(reader.GetString("fname"));
@@ -50,18 +50,20 @@ namespace SMCSM
                     case "Employee ID":
                         ad.Add(reader.GetString("empNo"));
                         break;
+                    case "Position":
+                        ad.Add(reader.GetString("Position"));
+                        break;
                 }
             }
             csm.closeSql();
             txtSearchBy.AutoCompleteCustomSource = ad;
         }
-        #region
         public void fillEmpData(string a) 
         {
             try
             {
                 MySqlDataReader reader;
-                var _Result = csm.tblCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum,face from Employee where empno = '" + a + "' or fname = '" + a + "' or mname = '" + a + "' or lname = '" + a + "'");
+                var _Result = csm.tblCommand("Select empno, concat(fname,' ',mname,' ',lname)as'Fullname',position,Address,birthdate,(year(now()) - year(birthdate))as'Age',sex,civilstatus,contactnum,face from Employee where empno = '" + a + "' or fname = '" + a + "' or mname = '" + a + "' or lname = '" + a + "' or position = '"+a+"'");
                 reader = _Result.Item2.ExecuteReader();
                 performClear();
                 while (reader.Read())
