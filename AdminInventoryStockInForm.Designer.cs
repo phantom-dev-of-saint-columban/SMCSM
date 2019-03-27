@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtDateTo = new System.Windows.Forms.DateTimePicker();
+            this.dpDateTo = new System.Windows.Forms.DateTimePicker();
             this.dpDateFrom = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,19 +47,22 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dtDateTo
+            // dpDateTo
             // 
-            this.dtDateTo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDateTo.Location = new System.Drawing.Point(686, 75);
-            this.dtDateTo.Name = "dtDateTo";
-            this.dtDateTo.Size = new System.Drawing.Size(91, 20);
-            this.dtDateTo.TabIndex = 41;
+            this.dpDateTo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dpDateTo.CustomFormat = "yyyy-MM-dd";
+            this.dpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dpDateTo.Location = new System.Drawing.Point(686, 74);
+            this.dpDateTo.Name = "dpDateTo";
+            this.dpDateTo.Size = new System.Drawing.Size(91, 20);
+            this.dpDateTo.TabIndex = 41;
+            this.dpDateTo.ValueChanged += new System.EventHandler(this.dtDateTo_ValueChanged);
             // 
             // dpDateFrom
             // 
             this.dpDateFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpDateFrom.CustomFormat = "yyyy-MM-dd";
+            this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpDateFrom.Location = new System.Drawing.Point(554, 74);
             this.dpDateFrom.Name = "dpDateFrom";
             this.dpDateFrom.Size = new System.Drawing.Size(91, 20);
@@ -102,6 +105,7 @@
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(389, 73);
@@ -110,16 +114,19 @@
             this.btnSearch.TabIndex = 36;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchBy
             // 
             this.txtSearchBy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearchBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchBy.Enabled = false;
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBy.Location = new System.Drawing.Point(259, 73);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(127, 26);
             this.txtSearchBy.TabIndex = 28;
+            this.txtSearchBy.TextChanged += new System.EventHandler(this.txtSearchBy_TextChanged);
             // 
             // cmbSearchBy
             // 
@@ -127,10 +134,19 @@
             this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            "",
+            "Delivery Receipt No",
+            "Product No",
+            "Supplier ID",
+            "Unit",
+            "Quantity",
+            "Date"});
             this.cmbSearchBy.Location = new System.Drawing.Point(132, 73);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
             this.cmbSearchBy.TabIndex = 35;
+            this.cmbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cmbSearchBy_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -171,8 +187,9 @@
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(146, 36);
             this.btnPrintPreview.TabIndex = 29;
-            this.btnPrintPreview.Text = "PRINT PREVIEW";
+            this.btnPrintPreview.Text = "PRINT RECORD";
             this.btnPrintPreview.UseVisualStyleBackColor = false;
+            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
             // panel1
             // 
@@ -201,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 442);
-            this.Controls.Add(this.dtDateTo);
+            this.Controls.Add(this.dpDateTo);
             this.Controls.Add(this.dpDateFrom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -227,7 +244,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dtDateTo;
+        private System.Windows.Forms.DateTimePicker dpDateTo;
         private System.Windows.Forms.DateTimePicker dpDateFrom;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

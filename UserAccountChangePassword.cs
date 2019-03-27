@@ -14,14 +14,17 @@ namespace SMCSM
     {
         public string _oldPassword = "",_username = "";
         CallSqlModule csm = new CallSqlModule();
-        public UserAccountChangePassword()
+        UserAccountForm uaf;
+        public UserAccountChangePassword(UserAccountForm uaf)
         {
             InitializeComponent();
+            label5.Text = _username;
+            this.uaf = uaf;
         }
         #region Dev's Method
         private void performChange() 
         {
-            MessageBox.Show(csm.saveInto("update useraccount set password = '" + txtNewPassword.Text + "' where username = '" + _username + "'"), "Updated", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show(csm.saveInto("update useraccount set password = '" + txtNewPassword.Text + "' where username = '" + _username + "' and password = '"+_oldPassword+"'"), "Updated", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
         #endregion
         private void btnChange_Click(object sender, EventArgs e)
@@ -29,6 +32,7 @@ namespace SMCSM
             if (txtNewPassword.Text == txtReEnterPassword.Text)
             {
                 performChange();
+                uaf.getUsername();
                 this.Dispose();
             }
             else { MessageBox.Show("Password doesn't Match","Try Again",MessageBoxButtons.OK,MessageBoxIcon.Stop); }

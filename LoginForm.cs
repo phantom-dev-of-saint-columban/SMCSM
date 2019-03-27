@@ -33,7 +33,7 @@ namespace SMCSM
                     MessageBox.Show("Supervisor");
                 break;
                 case "STOCK CLERK":
-                    thisMainForm.callFormToPnlContainer(new StockClerkMainMenu());
+                    thisMainForm.callFormToPnlContainer(new StockClerkMainMenu(thisMainForm));
                 break;
                 default:
                     lblIncorrect.Visible = true; label1.ForeColor = Color.Red; label2.ForeColor = Color.Red;

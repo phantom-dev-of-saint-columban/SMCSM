@@ -13,7 +13,7 @@ namespace SMCSM
 {
     public partial class UserAccountForm : Form
     {
-        MainMenuForm mmf;
+        MainMenuForm mmf; CallSqlModule csm = new CallSqlModule();
         public UserAccountForm(MainMenuForm mmf)
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace SMCSM
         public void getUsername() 
         {
             lblUsername.Text = mmf._username;
-            txtPassword.Text = mmf._password;
+            txtPassword.Text = csm.countSQL("select password from useraccount where username = '"+mmf._username+"'","password");
         }
         #endregion
 
@@ -34,7 +34,7 @@ namespace SMCSM
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            using(UserAccountChangePassword uacp = new UserAccountChangePassword())
+            using(UserAccountChangePassword uacp = new UserAccountChangePassword(this))
             {
                 uacp._oldPassword = txtPassword.Text;
                 uacp._username = lblUsername.Text;
