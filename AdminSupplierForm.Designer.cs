@@ -66,11 +66,18 @@
             this.cmbSearchBy.Items.AddRange(new object[] {
             "",
             "Supplier ID",
-            "Supplier Name"});
+            "Supplier Name",
+            "Supplier Address",
+            "Contact",
+            "Telephone",
+            "Fax",
+            "Email",
+            "Website"});
             this.cmbSearchBy.Location = new System.Drawing.Point(219, 72);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(150, 27);
             this.cmbSearchBy.TabIndex = 67;
+            this.cmbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cmbSearchBy_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -87,6 +94,7 @@
             // 
             this.btnSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(710, 72);
@@ -95,6 +103,7 @@
             this.btnSearch.TabIndex = 68;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchBy
             // 
@@ -105,6 +114,7 @@
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(329, 27);
             this.txtSearchBy.TabIndex = 60;
+            this.txtSearchBy.TextChanged += new System.EventHandler(this.txtSearchBy_TextChanged);
             // 
             // btnPrintPreview
             // 
@@ -116,8 +126,9 @@
             this.btnPrintPreview.Name = "btnPrintPreview";
             this.btnPrintPreview.Size = new System.Drawing.Size(186, 36);
             this.btnPrintPreview.TabIndex = 61;
-            this.btnPrintPreview.Text = "PRINT PREVIEW";
+            this.btnPrintPreview.Text = "PRINT RECORD";
             this.btnPrintPreview.UseVisualStyleBackColor = false;
+            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
             // 
             // panel1
             // 
@@ -161,6 +172,7 @@
             this.tblSupplier.Name = "tblSupplier";
             this.tblSupplier.Size = new System.Drawing.Size(1215, 253);
             this.tblSupplier.TabIndex = 0;
+            this.tblSupplier.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblSupplier_CellDoubleClick);
             // 
             // btnDelete
             // 

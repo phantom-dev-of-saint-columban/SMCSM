@@ -14,11 +14,12 @@ namespace SMCSM
     public partial class AddSupplier : Form
     {
         CallSqlModule csm = new CallSqlModule();
-
-        public AddSupplier()
+        AdminSupplierForm asf;
+        public AddSupplier(AdminSupplierForm asf)
         {
             InitializeComponent();
             lblSupplierID.Text = autoGenEmpID();
+            this.asf = asf;
         }
         #region Dev's Method
         private string autoGenEmpID()
@@ -35,7 +36,7 @@ namespace SMCSM
         private void performSave()
         {
             MessageBox.Show(csm.saveInto("insert into supplier (supplierID,Name,Address,ContactNum,TelNum,FaxNum,Email, Website) "+
-                "values ('"+lblSupplierID.Text+"','"+txtSupplierName+"','"+txtSupplierAddress.Text+"','"+txtContactNum.Text+"','"+txtTelephoneNum.Text+"','"+txtFaxNum.Text+"','"+txtEmail.Text+"','"+txtWebsite.Text+"')"),"Saving",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                "values ('"+lblSupplierID.Text+"','"+txtSupplierName.Text+"','"+txtSupplierAddress.Text+"','"+txtContactNum.Text+"','"+txtTelephoneNum.Text+"','"+txtFaxNum.Text+"','"+txtEmail.Text+"','"+txtWebsite.Text+"')"),"Saving",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
         }
         public void fillDataField(string a) 
         {
@@ -76,6 +77,7 @@ namespace SMCSM
             {
                 performUpdate();
             }
+            asf.fillTable();
             this.Dispose();
         }
     }

@@ -9,12 +9,11 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class AdminInventoryStockInForm : Form
+    public partial class StockClerkInventorySales : Form
     {
-        public AdminInventoryStockInForm()
+        public StockClerkInventorySales()
         {
             InitializeComponent();
         }
-
     }
 }
