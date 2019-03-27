@@ -54,7 +54,7 @@ namespace SMCSM
                 txtName.Text = reader.GetString("Name");
                 txtPassword.Text = reader.GetString("Password");
                 txtUsername.Text = reader.GetString("username");
-                cmbUserType.Text = reader.GetString("usertype");
+                cmbUserType.SelectedText = reader.GetString("usertype");
                 txtQuestion.Text = reader.GetString("Question");
                 txtAnswer.Text = reader.GetString("Answer");
             }

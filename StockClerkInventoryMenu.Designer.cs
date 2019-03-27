@@ -44,6 +44,7 @@
             this.msStockIn.Padding = new System.Windows.Forms.Padding(250, 0, 4, 0);
             this.msStockIn.Size = new System.Drawing.Size(340, 27);
             this.msStockIn.Text = "STOCK IN";
+            this.msStockIn.Click += new System.EventHandler(this.msStockIn_Click);
             // 
             // msSales
             // 
@@ -51,6 +52,7 @@
             this.msSales.Padding = new System.Windows.Forms.Padding(200, 0, 4, 0);
             this.msSales.Size = new System.Drawing.Size(265, 27);
             this.msSales.Text = "SALES";
+            this.msSales.Click += new System.EventHandler(this.msSales_Click);
             // 
             // pnlContainer
             // 
@@ -81,6 +83,7 @@
             this.msStockReturn.Padding = new System.Windows.Forms.Padding(150, 0, 4, 0);
             this.msStockReturn.Size = new System.Drawing.Size(287, 27);
             this.msStockReturn.Text = "STOCK RETURN";
+            this.msStockReturn.Click += new System.EventHandler(this.msStockReturn_Click);
             // 
             // StockClerkInventoryMenu
             // 

@@ -26,12 +26,6 @@ namespace SMCSM
             txtPassword.Text = csm.countSQL("select password from useraccount where username = '"+mmf._username+"'","password");
         }
         #endregion
-
-        private void btnShowPassword_Click(object sender, EventArgs e)
-        {
-            txtPassword.PasswordChar = '\0';
-        }
-
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             using(UserAccountChangePassword uacp = new UserAccountChangePassword(this))
@@ -40,6 +34,16 @@ namespace SMCSM
                 uacp._username = lblUsername.Text;
                 uacp.ShowDialog();
             }
+        }
+
+        private void btnShowPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtPassword.PasswordChar = '\0';
+        }
+
+        private void btnShowPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtPassword.PasswordChar = '•';
         }
     }
 }
