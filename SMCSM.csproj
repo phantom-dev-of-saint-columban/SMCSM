@@ -62,6 +62,12 @@
     <Compile Include="AddNewUser.Designer.cs">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStockIn.Designer.cs">
+      <DependentUpon>AddStockIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,18 @@
     <Compile Include="StockClerkInventorySales.designer.cs">
       <DependentUpon>StockClerkInventorySales.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockClerkInventoryStockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockClerkInventoryStockIn.designer.cs">
+      <DependentUpon>StockClerkInventoryStockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockClerkInventoryStockReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockClerkInventoryStockReturn.designer.cs">
+      <DependentUpon>StockClerkInventoryStockReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAccountChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +204,9 @@
     <EmbeddedResource Include="AddNewUser.resx">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStockIn.resx">
+      <DependentUpon>AddStockIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +245,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockClerkInventorySales.resx">
       <DependentUpon>StockClerkInventorySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockClerkInventoryStockIn.resx">
+      <DependentUpon>StockClerkInventoryStockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockClerkInventoryStockReturn.resx">
+      <DependentUpon>StockClerkInventoryStockReturn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccountChangePassword.resx">
       <DependentUpon>UserAccountChangePassword.cs</DependentUpon>

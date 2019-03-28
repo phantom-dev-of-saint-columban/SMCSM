@@ -28,39 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.msStockIn = new System.Windows.Forms.ToolStripMenuItem();
-            this.msSales = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.msStockIn = new System.Windows.Forms.ToolStripMenuItem();
+            this.msSales = new System.Windows.Forms.ToolStripMenuItem();
             this.msStockReturn = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContainer.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // msStockIn
-            // 
-            this.msStockIn.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
-            this.msStockIn.Name = "msStockIn";
-            this.msStockIn.Padding = new System.Windows.Forms.Padding(250, 0, 4, 0);
-            this.msStockIn.Size = new System.Drawing.Size(340, 27);
-            this.msStockIn.Text = "STOCK IN";
-            this.msStockIn.Click += new System.EventHandler(this.msStockIn_Click);
-            // 
-            // msSales
-            // 
-            this.msSales.Name = "msSales";
-            this.msSales.Padding = new System.Windows.Forms.Padding(200, 0, 4, 0);
-            this.msSales.Size = new System.Drawing.Size(265, 27);
-            this.msSales.Text = "SALES";
-            this.msSales.Click += new System.EventHandler(this.msSales_Click);
-            // 
             // pnlContainer
             // 
-            this.pnlContainer.Controls.Add(this.menuStrip1);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(0, 0);
+            this.pnlContainer.Location = new System.Drawing.Point(0, 31);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(900, 455);
+            this.pnlContainer.Size = new System.Drawing.Size(900, 424);
             this.pnlContainer.TabIndex = 4;
             // 
             // menuStrip1
@@ -74,8 +55,25 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(900, 31);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // msStockIn
+            // 
+            this.msStockIn.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold);
+            this.msStockIn.Name = "msStockIn";
+            this.msStockIn.Padding = new System.Windows.Forms.Padding(250, 0, 4, 0);
+            this.msStockIn.Size = new System.Drawing.Size(340, 27);
+            this.msStockIn.Text = "STOCK IN";
+            this.msStockIn.Click += new System.EventHandler(this.msStockIn_Click_1);
+            // 
+            // msSales
+            // 
+            this.msSales.Name = "msSales";
+            this.msSales.Padding = new System.Windows.Forms.Padding(200, 0, 4, 0);
+            this.msSales.Size = new System.Drawing.Size(265, 27);
+            this.msSales.Text = "SALES";
+            this.msSales.Click += new System.EventHandler(this.msSales_Click_1);
             // 
             // msStockReturn
             // 
@@ -83,7 +81,7 @@
             this.msStockReturn.Padding = new System.Windows.Forms.Padding(150, 0, 4, 0);
             this.msStockReturn.Size = new System.Drawing.Size(287, 27);
             this.msStockReturn.Text = "STOCK RETURN";
-            this.msStockReturn.Click += new System.EventHandler(this.msStockReturn_Click);
+            this.msStockReturn.Click += new System.EventHandler(this.msStockReturn_Click_1);
             // 
             // StockClerkInventoryMenu
             // 
@@ -91,23 +89,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 455);
             this.Controls.Add(this.pnlContainer);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StockClerkInventoryMenu";
             this.Text = "StockClerkInventoryMenu";
-            this.pnlContainer.ResumeLayout(false);
-            this.pnlContainer.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStripMenuItem msStockIn;
-        private System.Windows.Forms.ToolStripMenuItem msSales;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem msStockIn;
+        private System.Windows.Forms.ToolStripMenuItem msSales;
         private System.Windows.Forms.ToolStripMenuItem msStockReturn;
     }
 }

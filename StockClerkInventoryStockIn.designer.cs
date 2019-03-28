@@ -61,6 +61,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(358, 40);
@@ -69,16 +70,26 @@
             this.btnSearch.TabIndex = 52;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbSearchBy
             // 
             this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            "",
+            "Delivery Receipt No",
+            "Product No",
+            "Supplier ID",
+            "Unit",
+            "Quantity",
+            "Date"});
             this.cmbSearchBy.Location = new System.Drawing.Point(101, 40);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
             this.cmbSearchBy.TabIndex = 51;
+            this.cmbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cmbSearchBy_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -134,10 +145,14 @@
             // 
             // tblStockIn
             // 
+            this.tblStockIn.AllowUserToAddRows = false;
+            this.tblStockIn.AllowUserToDeleteRows = false;
+            this.tblStockIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblStockIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblStockIn.Location = new System.Drawing.Point(6, 6);
+            this.tblStockIn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblStockIn.Location = new System.Drawing.Point(0, 0);
             this.tblStockIn.Name = "tblStockIn";
-            this.tblStockIn.Size = new System.Drawing.Size(888, 214);
+            this.tblStockIn.Size = new System.Drawing.Size(899, 234);
             this.tblStockIn.TabIndex = 0;
             // 
             // btnAdd
@@ -151,28 +166,34 @@
             this.btnAdd.TabIndex = 56;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearchBy
             // 
             this.txtSearchBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchBy.Enabled = false;
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBy.Location = new System.Drawing.Point(228, 40);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(127, 26);
             this.txtSearchBy.TabIndex = 44;
+            this.txtSearchBy.TextChanged += new System.EventHandler(this.txtSearchBy_TextChanged);
             // 
             // dtDateTo
             // 
-            this.dtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDateTo.CustomFormat = "yyyy-MM-dd";
+            this.dtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDateTo.Location = new System.Drawing.Point(628, 41);
             this.dtDateTo.Name = "dtDateTo";
             this.dtDateTo.Size = new System.Drawing.Size(91, 20);
             this.dtDateTo.TabIndex = 60;
             this.dtDateTo.Visible = false;
+            this.dtDateTo.ValueChanged += new System.EventHandler(this.dtDateTo_ValueChanged);
             // 
             // dpDateFrom
             // 
-            this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpDateFrom.CustomFormat = "yyyy-MM-dd";
+            this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpDateFrom.Location = new System.Drawing.Point(496, 40);
             this.dpDateFrom.Name = "dpDateFrom";
             this.dpDateFrom.Size = new System.Drawing.Size(91, 20);
@@ -201,7 +222,7 @@
             this.label3.Text = "FROM:";
             this.label3.Visible = false;
             // 
-            // StockClerkStockIn
+            // StockClerkInventoryStockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,9 +242,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StockClerkStockIn";
+            this.Name = "StockClerkInventoryStockIn";
             this.Text = "StockClerkStockIn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.StockClerkInventoryStockIn_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

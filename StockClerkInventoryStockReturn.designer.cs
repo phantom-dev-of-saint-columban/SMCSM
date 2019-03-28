@@ -188,12 +188,12 @@
             this.tblStockReturn.Size = new System.Drawing.Size(888, 214);
             this.tblStockReturn.TabIndex = 0;
             // 
-            // StockClerkStockReturn
+            // StockClerkInventoryStockReturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(945, 381);
+            this.ClientSize = new System.Drawing.Size(966, 431);
             this.Controls.Add(this.dtDateTo);
             this.Controls.Add(this.dpDateFrom);
             this.Controls.Add(this.label5);
@@ -207,7 +207,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StockClerkStockReturn";
+            this.Name = "StockClerkInventoryStockReturn";
             this.Text = "StockClerkStockReturn";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -59,7 +59,6 @@ namespace SMCSM
                 txtAnswer.Text = reader.GetString("Answer");
             }
         }
-        
         #endregion
         private void btnCancel_Click(object sender, EventArgs e)
         {
