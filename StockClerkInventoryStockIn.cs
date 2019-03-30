@@ -19,6 +19,7 @@ namespace SMCSM
         {
             InitializeComponent();
             this.mmf = mmf;
+            fillTable();
         }
         #region Dev's Method
         public void fillTable()

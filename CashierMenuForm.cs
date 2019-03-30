@@ -11,10 +11,13 @@ namespace SMCSM
 {
     public partial class CashierMenuForm : Form
     {
-        public CashierMenuForm()
+        MainMenuForm mmf;
+        public CashierMenuForm(MainMenuForm mmf)
         {
             InitializeComponent();
+            this.mmf = mmf;
         }
+
         #region Dev's Methods
         public void callFormToPnlContainer(Form b)
         {
@@ -30,8 +33,13 @@ namespace SMCSM
 
         private void msSales_Click(object sender, EventArgs e)
         {
-            PointOfSaleForm posf = new PointOfSaleForm();
-            callFormToPnlContainer(posf);
+        }
+
+        private void msUserAccount_Click(object sender, EventArgs e)
+        {
+            UserAccountForm uaf = new UserAccountForm(mmf);
+            uaf.getUsername();
+            callFormToPnlContainer(uaf);
         }
     }
 }

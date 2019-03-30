@@ -18,6 +18,7 @@ namespace SMCSM
         public AdminInventoryStockReturnForm()
         {
             InitializeComponent();
+            fillTable();
         }
         #region Dev's Method
         public void fillTable()

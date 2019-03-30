@@ -17,6 +17,7 @@ namespace SMCSM
         public StockClerkInventorySales()
         {
             InitializeComponent();
+            fillTable();
         }
         #region Dev's Method
         public void fillTable()
@@ -52,6 +53,7 @@ namespace SMCSM
             if(cmbSearchBy.Text == "Sales Date")
             {
                 pnlDate.Visible = true;
+                txtSearchBy.Enabled = true;
             }
             else if(cmbSearchBy.Text == "Order Receipt")
             {

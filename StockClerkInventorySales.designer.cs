@@ -90,7 +90,7 @@
             this.cmbSearchBy.FormattingEnabled = true;
             this.cmbSearchBy.Items.AddRange(new object[] {
             "",
-            "Sales Date\t",
+            "Sales Date",
             "Order Receipt"});
             this.cmbSearchBy.Location = new System.Drawing.Point(107, 62);
             this.cmbSearchBy.Name = "cmbSearchBy";
@@ -140,6 +140,9 @@
             // 
             // tblSales
             // 
+            this.tblSales.AllowUserToAddRows = false;
+            this.tblSales.AllowUserToDeleteRows = false;
+            this.tblSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblSales.Location = new System.Drawing.Point(6, 6);
             this.tblSales.Name = "tblSales";
@@ -166,7 +169,6 @@
             this.dpDateFrom.Name = "dpDateFrom";
             this.dpDateFrom.Size = new System.Drawing.Size(91, 20);
             this.dpDateFrom.TabIndex = 80;
-            this.dpDateFrom.Visible = false;
             // 
             // dtDateTo
             // 
@@ -176,7 +178,6 @@
             this.dtDateTo.Name = "dtDateTo";
             this.dtDateTo.Size = new System.Drawing.Size(91, 20);
             this.dtDateTo.TabIndex = 81;
-            this.dtDateTo.Visible = false;
             this.dtDateTo.ValueChanged += new System.EventHandler(this.dtDateTo_ValueChanged);
             // 
             // label3
@@ -189,7 +190,6 @@
             this.label3.Size = new System.Drawing.Size(50, 18);
             this.label3.TabIndex = 78;
             this.label3.Text = "FROM:";
-            this.label3.Visible = false;
             // 
             // label5
             // 
@@ -201,7 +201,6 @@
             this.label5.Size = new System.Drawing.Size(29, 18);
             this.label5.TabIndex = 79;
             this.label5.Text = "TO:";
-            this.label5.Visible = false;
             // 
             // StockClerkInventorySales
             // 
