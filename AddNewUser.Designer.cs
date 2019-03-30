@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtAnswer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtFullname = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // cmbUserType
@@ -130,8 +131,9 @@
             this.txtName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(212, 74);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(232, 27);
+            this.txtName.Size = new System.Drawing.Size(83, 27);
             this.txtName.TabIndex = 26;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label4
             // 
@@ -163,11 +165,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(150, 76);
+            this.label2.Location = new System.Drawing.Point(87, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.Size = new System.Drawing.Size(119, 19);
             this.label2.TabIndex = 23;
-            this.label2.Text = "NAME:";
+            this.label2.Text = "EMPLOYEE NO.: ";
             // 
             // label1
             // 
@@ -239,12 +241,24 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "Security Question: ";
             // 
+            // txtFullname
+            // 
+            this.txtFullname.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFullname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullname.Location = new System.Drawing.Point(301, 74);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.ReadOnly = true;
+            this.txtFullname.Size = new System.Drawing.Size(193, 27);
+            this.txtFullname.TabIndex = 38;
+            // 
             // AddNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(545, 381);
+            this.Controls.Add(this.txtFullname);
             this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtQuestion);
@@ -288,5 +302,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAnswer;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtFullname;
     }
 }

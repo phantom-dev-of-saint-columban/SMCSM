@@ -42,24 +42,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tblStockReturn = new System.Windows.Forms.DataGridView();
+            this.pnlDate = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblStockReturn)).BeginInit();
+            this.pnlDate.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtDateTo
             // 
+            this.dtDateTo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDateTo.Location = new System.Drawing.Point(631, 39);
+            this.dtDateTo.Location = new System.Drawing.Point(193, 4);
             this.dtDateTo.Name = "dtDateTo";
             this.dtDateTo.Size = new System.Drawing.Size(91, 20);
             this.dtDateTo.TabIndex = 81;
             this.dtDateTo.Visible = false;
+            this.dtDateTo.ValueChanged += new System.EventHandler(this.dtDateTo_ValueChanged);
             // 
             // dpDateFrom
             // 
+            this.dpDateFrom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpDateFrom.Location = new System.Drawing.Point(499, 38);
+            this.dpDateFrom.Location = new System.Drawing.Point(61, 3);
             this.dpDateFrom.Name = "dpDateFrom";
             this.dpDateFrom.Size = new System.Drawing.Size(91, 20);
             this.dpDateFrom.TabIndex = 80;
@@ -67,9 +72,10 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(596, 41);
+            this.label5.Location = new System.Drawing.Point(158, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 18);
             this.label5.TabIndex = 79;
@@ -78,9 +84,10 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(443, 41);
+            this.label3.Location = new System.Drawing.Point(5, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 18);
             this.label3.TabIndex = 78;
@@ -98,6 +105,7 @@
             this.btnAdd.TabIndex = 77;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label6
             // 
@@ -112,6 +120,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(361, 38);
@@ -120,25 +129,34 @@
             this.btnSearch.TabIndex = 73;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbSearchBy
             // 
             this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            "",
+            "Return Date",
+            "Return Slip No",
+            "Item Code"});
             this.cmbSearchBy.Location = new System.Drawing.Point(104, 38);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
             this.cmbSearchBy.TabIndex = 72;
+            this.cmbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cmbSearchBy_SelectedIndexChanged);
             // 
             // txtSearchBy
             // 
             this.txtSearchBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchBy.Enabled = false;
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBy.Location = new System.Drawing.Point(231, 38);
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(127, 26);
             this.txtSearchBy.TabIndex = 65;
+            this.txtSearchBy.TextChanged += new System.EventHandler(this.txtSearchBy_TextChanged);
             // 
             // label7
             // 
@@ -188,16 +206,25 @@
             this.tblStockReturn.Size = new System.Drawing.Size(888, 214);
             this.tblStockReturn.TabIndex = 0;
             // 
+            // pnlDate
+            // 
+            this.pnlDate.Controls.Add(this.dpDateFrom);
+            this.pnlDate.Controls.Add(this.dtDateTo);
+            this.pnlDate.Controls.Add(this.label3);
+            this.pnlDate.Controls.Add(this.label5);
+            this.pnlDate.Location = new System.Drawing.Point(433, 34);
+            this.pnlDate.Name = "pnlDate";
+            this.pnlDate.Size = new System.Drawing.Size(289, 26);
+            this.pnlDate.TabIndex = 82;
+            this.pnlDate.Visible = false;
+            // 
             // StockClerkInventoryStockReturn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(966, 431);
-            this.Controls.Add(this.dtDateTo);
-            this.Controls.Add(this.dpDateFrom);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pnlDate);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSearch);
@@ -213,6 +240,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblStockReturn)).EndInit();
+            this.pnlDate.ResumeLayout(false);
+            this.pnlDate.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +263,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView tblStockReturn;
+        private System.Windows.Forms.Panel pnlDate;
     }
 }

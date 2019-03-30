@@ -24,6 +24,7 @@ namespace SMCSM
         public void fillTable()
         {
             tblStockIn.DataSource = csm.fillTable("Select * from stockin si inner join stockinreg sir on si.DRNo = sir.DRNo").Tables[0];
+            btnEdit.Enabled = false;
         }
         private void autoCompleteSearch(string a)
         {
@@ -112,10 +113,25 @@ namespace SMCSM
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            using(AddStockIn asi = new AddStockIn(mmf))
+            using(AddStockIn asi = new AddStockIn(mmf,this))
             {
                 asi.ShowDialog();
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            using (AddStockIn asi = new AddStockIn(mmf, this))
+            {
+                asi.fillDataField(tblStockIn.CurrentRow.Cells[0].Value.ToString());
+                asi.btnAdd.Text = "UPDATE";
+                asi.ShowDialog();
+            }
+        }
+
+        private void tblStockIn_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEdit.Enabled = true;
         }
     }
 }

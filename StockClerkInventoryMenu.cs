@@ -44,7 +44,7 @@ namespace SMCSM
 
         private void msStockReturn_Click_1(object sender, EventArgs e)
         {
-            StockClerkInventoryStockReturn scisr = new StockClerkInventoryStockReturn();
+            StockClerkInventoryStockReturn scisr = new StockClerkInventoryStockReturn(mmf);
             callFormToPnlContainer(scisr);
         }
     }

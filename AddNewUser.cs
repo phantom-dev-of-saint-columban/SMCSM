@@ -20,7 +20,9 @@ namespace SMCSM
             InitializeComponent();
             lblAccNo.Text = "A" + String.Format("{0:D4}", int.Parse(csm.countSQL("select count(*)'all' from useraccount", "All")));
             this.acf = acf;
+            autoCompleteEmp();
         }
+
         #region Dev's Method
         private void performClear()
         {
@@ -59,7 +61,22 @@ namespace SMCSM
                 txtAnswer.Text = reader.GetString("Answer");
             }
         }
+        private void autoCompleteEmp()
+        {
+            txtName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            AutoCompleteStringCollection ad = new AutoCompleteStringCollection();
+            MySqlDataReader reader = csm.sqlCommand("Select empno from employee").ExecuteReader();
+            ad.Clear();
+            while (reader.Read())
+            {
+                ad.Add(reader.GetString("EmpNo"));
+            }
+            csm.closeSql();
+            txtName.AutoCompleteCustomSource = ad;
+        }
         #endregion
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -77,6 +94,11 @@ namespace SMCSM
             }
             this.Dispose();
             acf.fillTable();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            txtFullname.Text = csm.countSQL("select concat(Fname, ' ',Mname,' ',Lname)as'Fullname' from employee where empno = '"+txtName.Text+"'","fullname");
         }
     }
 }

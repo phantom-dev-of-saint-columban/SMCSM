@@ -27,7 +27,7 @@ namespace SMCSM
                     thisMainForm.callFormToPnlContainer(new AdminMainMenuForm(thisMainForm));
                 break;
                 case "CASHIER":
-                    MessageBox.Show("Cashier");
+                thisMainForm.callFormToPnlContainer(new PointOfSaleForm());
                 break;
                 case "SUPERVISOR":
                     MessageBox.Show("Supervisor");

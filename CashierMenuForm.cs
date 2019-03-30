@@ -9,15 +9,12 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class StockClerkMainMenu : Form
+    public partial class CashierMenuForm : Form
     {
-        MainMenuForm mmf;
-        public StockClerkMainMenu(MainMenuForm mmf)
+        public CashierMenuForm()
         {
             InitializeComponent();
-            this.mmf = mmf;
         }
-
         #region Dev's Methods
         public void callFormToPnlContainer(Form b)
         {
@@ -31,17 +28,10 @@ namespace SMCSM
         }
         #endregion
 
-        private void msInventory_Click(object sender, EventArgs e)
+        private void msSales_Click(object sender, EventArgs e)
         {
-            StockClerkInventoryMenu scim = new StockClerkInventoryMenu(mmf);
-            callFormToPnlContainer(scim);
-        }
-
-        private void msUserAccount_Click(object sender, EventArgs e)
-        {
-            UserAccountForm uaf = new UserAccountForm(mmf);
-            uaf.getUsername();
-            callFormToPnlContainer(uaf);
+            PointOfSaleForm posf = new PointOfSaleForm();
+            callFormToPnlContainer(posf);
         }
     }
 }

@@ -350,8 +350,8 @@
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Button btnAdd;
     }
 }

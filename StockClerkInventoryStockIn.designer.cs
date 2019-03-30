@@ -104,6 +104,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnEdit.Enabled = false;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(810, 337);
@@ -112,6 +113,7 @@
             this.btnEdit.TabIndex = 45;
             this.btnEdit.Text = "EDIT";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel1
             // 
@@ -152,8 +154,10 @@
             this.tblStockIn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblStockIn.Location = new System.Drawing.Point(0, 0);
             this.tblStockIn.Name = "tblStockIn";
+            this.tblStockIn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblStockIn.Size = new System.Drawing.Size(899, 234);
             this.tblStockIn.TabIndex = 0;
+            this.tblStockIn.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblStockIn_CellDoubleClick);
             // 
             // btnAdd
             // 

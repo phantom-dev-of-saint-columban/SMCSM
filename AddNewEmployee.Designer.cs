@@ -463,6 +463,7 @@
             this.Controls.Add(this.lblEmployeeID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddNewEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Employee";

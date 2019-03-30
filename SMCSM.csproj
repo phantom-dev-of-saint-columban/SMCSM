@@ -68,6 +68,12 @@
     <Compile Include="AddStockIn.Designer.cs">
       <DependentUpon>AddStockIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddStockReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStockReturn.Designer.cs">
+      <DependentUpon>AddStockReturn.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     <Compile Include="AdminSupplierForm.Designer.cs">
       <DependentUpon>AdminSupplierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CashierMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierMenuForm.Designer.cs">
+      <DependentUpon>CashierMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DGVPrinter.cs" />
     <Compile Include="ForgotPasswordSecurityQuest.cs">
       <SubType>Form</SubType>
@@ -128,6 +140,12 @@
     </Compile>
     <Compile Include="ForgotPassworUsername.Designer.cs">
       <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointOfSaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PointOfSaleForm.designer.cs">
+      <DependentUpon>PointOfSaleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StockClerkInventoryMenu.cs">
       <SubType>Form</SubType>
@@ -207,6 +225,9 @@
     <EmbeddedResource Include="AddStockIn.resx">
       <DependentUpon>AddStockIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddStockReturn.resx">
+      <DependentUpon>AddStockReturn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,11 +252,17 @@
     <EmbeddedResource Include="AdminSupplierForm.resx">
       <DependentUpon>AdminSupplierForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CashierMenuForm.resx">
+      <DependentUpon>CashierMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordSecurityQuest.resx">
       <DependentUpon>ForgotPasswordSecurityQuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassworUsername.resx">
       <DependentUpon>ForgotPassworUsername.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointOfSaleForm.resx">
+      <DependentUpon>PointOfSaleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockClerkInventoryMenu.resx">
       <DependentUpon>StockClerkInventoryMenu.cs</DependentUpon>
