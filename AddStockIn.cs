@@ -19,6 +19,7 @@ namespace SMCSM
         public AddStockIn(MainMenuForm mmf, StockClerkInventoryStockIn scisi)
         {
             InitializeComponent();
+            lblProdNo.Text = autoGenEmpID();
             this.mmf = mmf;
             this.scisi = scisi;
         }
@@ -42,8 +43,8 @@ namespace SMCSM
         }
         private void performSaveAll() 
         {
-            if (csm.saveInto("insert into stockin (DRno, ProductNo, SupplierID, Unit, Quantity, StockDate) " +
-                "values ('" + lblDRNo.Text + "','" + lblProdNo.Text + "','" + cmbSupplier.Text + "', '" + txtUnit.Text + "','" + txtQuan.Text + "','" + lblStockDate.Text + "')") == "Successful")
+            if (csm.saveInto("insert into stockin (DRno, ProductNo, SupplierID, Unit, Quantity) " +
+                "values ('" + lblDRNo.Text + "','" + lblProdNo.Text + "','" + cmbSupplier.Text + "', '" + txtUnit.Text + "','" + txtQuan.Text + "')") == "Successful")
             {
                 if (csm.saveInto("insert into product (productno,description,price,barcode) " +
                 "values ('" + lblProdNo.Text + "','" + txtDesc.Text + "','" + txtUnitPrice.Text + "','" + txtBarcode.Text + "')") == "Successful")
@@ -54,29 +55,28 @@ namespace SMCSM
             }
             else { MessageBox.Show("Error on StockIn Save","Error",MessageBoxButtons.OK,MessageBoxIcon.Error); }
         }
-
         private void UpdateAll() 
         {
-            if (csm.saveInto("update stockin set DrNo = '"+lblDRNo.Text+"', productno = '"+lblProdNo.Text+"', supplierID = '"+cmbSupplier.Text+"', unit = '"+txtUnit.Text+"',quantity = '"+txtQuan.Text+"',stockdate = '"+lblStockDate.Text+"' where DrNo = '"+lblDRNo.Text+"'") == "Successful")
+            if (csm.saveInto("update stockin set DrNo = '"+lblDRNo.Text+"', productno = '"+lblProdNo.Text+"', supplierID = '"+cmbSupplier.Text+"', unit = '"+txtUnit.Text+"',quantity = '"+txtQuan.Text+"' where DrNo = '"+lblDRNo.Text+"'") == "Successful")
             {
                 if (csm.saveInto("update product set productNo = '"+lblProdNo.Text+"', description = '"+txtDesc.Text+"',price = '"+txtUnitPrice.Text+"', barcode = '"+txtBarcode.Text+"' where productno = '"+lblProdNo.Text+"'") == "Successful")
                 {
-                    MessageBox.Show(csm.saveInto("update stockinreg set drNo = '"+lblDRNo.Text+"', stockDate = '"+lblStockDate.Text+"', empno = '"+empName+"'"), "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(csm.saveInto("update stockinreg set stockDate = '"+lblStockDate.Text+"', empno = '"+empName+"' where DrNo = '"+txtDesc.Text+"'"), "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else { MessageBox.Show("Error on Product Save", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else { MessageBox.Show("Error on Product Update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
-            else { MessageBox.Show("Error on StockIn Save", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else { MessageBox.Show("Error on StockIn Update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         public void fillDataField(string a) 
         {
-            MySqlDataReader _reader = csm.sqlCommand("select * from stockin si inner join product p on si.productNo = p.productno inner join stockinreg sir on si.drNo = sir.drNo where si.DRno = '"+a+"'").ExecuteReader();
+            MySqlDataReader _reader = csm.sqlCommand("select StockDate, Si.ProductNo, Description, Price, Si.DrNo, Quantity, Unit, SupplierID,Barcode from stockin si inner join product p on si.productNo = p.productno inner join stockinreg sir on si.drNo = sir.drNo where si.DRno = '"+a+"'").ExecuteReader();
             while(_reader.Read())
             {
                 lblStockDate.Text = _reader.GetString("StockDate");
-                lblProdNo.Text = _reader.GetString("StockDate");
-                txtDesc.Text = _reader.GetString("descripton");
+                lblProdNo.Text = _reader.GetString("ProductNo");
+                txtDesc.Text = _reader.GetString("Description");
                 txtUnitPrice.Text = _reader.GetString("Price");
-                lblDRNo.Text = _reader.GetString("si.DrNo");
+                lblDRNo.Text = _reader.GetString("DrNo");
                 txtQuan.Text = _reader.GetString("quantity");
                 txtUnit.Text = _reader.GetString("unit");
                 cmbSupplier.SelectedItem = _reader.GetString("SupplierID");
@@ -90,16 +90,13 @@ namespace SMCSM
         private void AddStockIn_Load(object sender, EventArgs e)
         {
             lblStockDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            lblProdNo.Text = autoGenEmpID();
             populateSupplier();
             empName = csm.countSQL("select empno from employee inner join useraccount on name = empno where username = '"+mmf._username+"'","empno");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (lblDRNo.Text != "" || txtBarcode.Text != "" || txtDesc.Text != "" || txtQuan.Text != "" || txtUnit.Text != "" || txtUnitPrice.Text != "")
-            {
-                if(btnAdd.Text == "SAVE")
+                if(btnAdd.Text == "ADD")
                 {
                     performSaveAll();
                     scisi.fillTable();
@@ -110,9 +107,6 @@ namespace SMCSM
                     scisi.fillTable();
                     this.Dispose();
                 }
-                
-            }
-            else { MessageBox.Show("Some field cannot be blank!","Oops!",MessageBoxButtons.OK,MessageBoxIcon.Stop); }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -121,10 +115,6 @@ namespace SMCSM
             if (dialogResult == DialogResult.Yes)
             {
                 this.Dispose();
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-
             }
         }
     }

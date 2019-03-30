@@ -70,6 +70,7 @@
             this.btnSearch.TabIndex = 36;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearchBy
             // 
@@ -80,6 +81,7 @@
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(127, 26);
             this.txtSearchBy.TabIndex = 28;
+            this.txtSearchBy.TextChanged += new System.EventHandler(this.txtSearchBy_TextChanged);
             // 
             // cmbSearchBy
             // 
@@ -175,6 +177,7 @@
             this.dtDateTo.Size = new System.Drawing.Size(91, 20);
             this.dtDateTo.TabIndex = 81;
             this.dtDateTo.Visible = false;
+            this.dtDateTo.ValueChanged += new System.EventHandler(this.dtDateTo_ValueChanged);
             // 
             // label3
             // 

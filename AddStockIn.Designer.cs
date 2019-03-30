@@ -340,7 +340,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblStockDate;
         private System.Windows.Forms.Label lblProdNo;
-        private System.Windows.Forms.TextBox lblDRNo;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.TextBox txtUnit;
         private System.Windows.Forms.TextBox txtQuan;
@@ -353,5 +352,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.TextBox lblDRNo;
     }
 }

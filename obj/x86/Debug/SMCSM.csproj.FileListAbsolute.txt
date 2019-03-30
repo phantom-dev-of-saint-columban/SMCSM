@@ -32,3 +32,4 @@ C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AddStockIn.resources
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.PointOfSaleForm.resources
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.CashierMenuForm.resources
+C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.AddStockReturn.resources

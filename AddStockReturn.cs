@@ -23,7 +23,7 @@ namespace SMCSM
         #region Dev's Method
         private void fillDateField(string a) 
         {
-            MySqlDataReader _reader = csm.sqlCommand("Select * from StockIn si inner join stockinreg sir on si.drNo = sir.drNo inner join product p on p.productno = si.productno where si.dr = '"+ txtDRno.Text +"'").ExecuteReader();
+            MySqlDataReader _reader = csm.sqlCommand("Select * from StockIn si inner join stockinreg sir on si.drNo = sir.drNo inner join product p on p.productno = si.productno where si.drNo = '"+ txtDRno.Text +"'").ExecuteReader();
             while(_reader.Read())
             {
                 txtStockDate.Text = _reader.GetString("StockDate");
@@ -43,7 +43,7 @@ namespace SMCSM
             txtDRno.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtDRno.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection ad = new AutoCompleteStringCollection();
-            MySqlDataReader reader = csm.sqlCommand("Select DrNo from StockIn si inner join stockinreg sir on si.DrNo = sir.Drno").ExecuteReader();
+            MySqlDataReader reader = csm.sqlCommand("Select Si.DrNo from StockIn si inner join stockinreg sir on si.DrNo = sir.Drno").ExecuteReader();
             ad.Clear();
             while (reader.Read())
             {
@@ -86,6 +86,7 @@ namespace SMCSM
             _EmpNo = csm.countSQL("select name from useraccount where username = '" + mmf._username + "'and password = " + mmf._password + "", "Name");
             lblReturnSlipNo.Text = autoGenReturnSlip();
             lblReturnDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            autoCompleteSearch();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

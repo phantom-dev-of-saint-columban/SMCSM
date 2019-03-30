@@ -125,6 +125,7 @@ namespace SMCSM
             {
                 asi.fillDataField(tblStockIn.CurrentRow.Cells[0].Value.ToString());
                 asi.btnAdd.Text = "UPDATE";
+                asi.lblDRNo.ReadOnly = true;
                 asi.ShowDialog();
             }
         }
