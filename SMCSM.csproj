@@ -134,11 +134,11 @@
     <Compile Include="CashierPurchased.designer.cs">
       <DependentUpon>CashierPurchased.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashiersSales.cs">
+    <Compile Include="CashierSalesReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashiersSales.designer.cs">
-      <DependentUpon>CashiersSales.cs</DependentUpon>
+    <Compile Include="CashierSalesReport.Designer.cs">
+      <DependentUpon>CashierSalesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="DGVPrinter.cs" />
     <Compile Include="ForgotPasswordSecurityQuest.cs">
@@ -228,6 +228,12 @@
     <Compile Include="UserAccountUserForm.Designer.cs">
       <DependentUpon>UserAccountUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VoidItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoidItem.Designer.cs">
+      <DependentUpon>VoidItem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNewEmployee.resx">
       <DependentUpon>AddNewEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,8 +276,8 @@
     <EmbeddedResource Include="CashierPurchased.resx">
       <DependentUpon>CashierPurchased.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashiersSales.resx">
-      <DependentUpon>CashiersSales.cs</DependentUpon>
+    <EmbeddedResource Include="CashierSalesReport.resx">
+      <DependentUpon>CashierSalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordSecurityQuest.resx">
       <DependentUpon>ForgotPasswordSecurityQuest.cs</DependentUpon>
@@ -323,6 +329,9 @@
     </Compile>
     <EmbeddedResource Include="UserAccountUserForm.resx">
       <DependentUpon>UserAccountUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoidItem.resx">
+      <DependentUpon>VoidItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

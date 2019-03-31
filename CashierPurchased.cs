@@ -19,10 +19,11 @@ namespace SMCSM
             InitializeComponent();
             this.mmf = mmf;
         }
+
         #region Dev's Method
         private void getUnitPrice(string a)
         {
-            txtUnitPrice.Text = double.Parse(csm.countSQL("select price from product where productNo = '" + a + "'", "price")).ToString("N2");
+            txtUnitPrice.Text = Double.Parse(csm.countSQL("select price from product where productNo = '" + a + "'", "price")).ToString();
         }
         private void performClear() 
         {
@@ -49,12 +50,15 @@ namespace SMCSM
             lblTransactNo.Text = autoGenTransactionNo();
 
             tblOrder.Rows.Clear();
+
+            pnlPurchase.Visible = false;
+            btnAdd.Enabled = true;
         }
         private void calculateTotal() 
         {
             for (int i = 0; i < tblOrder.RowCount; i++ )
             {
-                txtTotal.Text = (double.Parse(txtTotal.Text) + double.Parse(tblOrder.Rows[i].Cells[2].Value.ToString())).ToString("N2");
+                txtTotal.Text = (Double.Parse(txtTotal.Text) + Double.Parse(tblOrder.Rows[i].Cells[3].Value.ToString())).ToString();
             }
         }
         private void setEmpNoAndEmpName() 
@@ -86,10 +90,11 @@ namespace SMCSM
         }
         private void saveToSalesRegAndPayment() 
         {
-            if (csm.saveInto("insert into salesreg values('" + lblTransactNo.Text + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + lblEmpNo.Text + "')") == "Successful")
+            if (csm.saveInto("insert into salesreg values('" + lblTransactNo.Text + "','" + DateTime.Now.ToShortTimeString() + "','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + lblEmpNo.Text + "')") == "Successful")
             {
-                MessageBox.Show(csm.saveInto("insert into payment values('" + lblOrderReceipt.Text + "','" + txtTotalPur.Text + "','" + txtCash.Text + "','" + txtChange.Text + "','" + txtDiscount.Text + "','" +lblTransactNo.Text + "')"),"Transaction Notification!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show(csm.saveInto("insert into payment values('" + lblOrderReceipt.Text + "','" + txtTotalPur.Text + "','" + txtCash.Text + "','" + txtChange.Text + "','" + txtDiscount.Text + "','" + lblTransactNo.Text + "')"), "Transaction Notification!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else { MessageBox.Show("Error on SalesReg Save", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         #endregion
 
@@ -103,17 +108,25 @@ namespace SMCSM
 
         private void txtUnitPrice_TextChanged(object sender, EventArgs e)
         {
-            txtSubtotal.Text = (double.Parse(txtUnitPrice.Text)).ToString("N2");
+            txtSubtotal.Text = (Double.Parse(txtUnitPrice.Text)).ToString();
         }
 
         private void txtQuan_TextChanged(object sender, EventArgs e)
         {
-            txtSubtotal.Text = (double.Parse(txtUnitPrice.Text) * double.Parse(txtQuan.Text)).ToString("N2");
+            try 
+            {
+                txtSubtotal.Text = (Double.Parse(txtUnitPrice.Text) * Double.Parse(txtQuan.Text)).ToString();
+            }
+            catch { txtSubtotal.Text = "Invalid Input"; }
         }
 
         private void txtDiscount_TextChanged(object sender, EventArgs e)
         {
-            txtSubtotal.Text = (double.Parse(txtSubtotal.Text) * double.Parse("0." + txtDiscount.Text)).ToString("N2");
+            try 
+            {
+            txtSubtotal.Text = (Double.Parse(txtSubtotal.Text) * Double.Parse("0." + txtDiscount.Text)).ToString();
+            }
+            catch { txtSubtotal.Text = "Invalid Input"; }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -121,26 +134,23 @@ namespace SMCSM
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to Add?", "Adding Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-                tblOrder.Rows.Add(csm.countSQL("select description from product where productNo = '" + txtProdNo.Text + "'", "description"), txtQuan.Text, txtUnitPrice.Text);
+                btnAdd.Enabled = false;
+                tblOrder.Rows.Add(txtProdNo.Text,csm.countSQL("select description from product where productNo = '" + txtProdNo.Text + "'", "description"), txtQuan.Text, txtUnitPrice.Text);
                 saveToSalesOrder();
-                calculateTotal();
                 performClear();
+                calculateTotal();
             }
         }
 
         private void CashierPurchased_Load(object sender, EventArgs e)
         {
-            lblTransactNo.Text = autoGenTransactionNo();
-            lblOrderReceipt.Text = autoGenOrderReceipt();
-            lblInvoiceNo.Text = autoGenInvoiceNo();
+            performClearAll();
+            setEmpNoAndEmpName();
         }
 
         private void btnPurchased_Click(object sender, EventArgs e)
         {
             txtTotalPur.Text = txtTotal.Text;
-            pnlPurchase.Location = new Point(424,55);
-            pnlPurchase.Height = 211;
-            pnlPurchase.Width = 375;
             pnlPurchase.Visible = true;
         }
 
@@ -148,7 +158,7 @@ namespace SMCSM
         {
             try
             {
-                txtChange.Text = (double.Parse(txtTotalPur.Text) - double.Parse(txtCash.Text)).ToString("N2");
+                txtChange.Text = (Double.Parse(txtTotalPur.Text) - Double.Parse(txtCash.Text)).ToString("N2");
             }
             catch { txtChange.Text = "Invalid Input"; }
         }
@@ -162,19 +172,65 @@ namespace SMCSM
                 {
                     saveToSalesRegAndPayment();
                     performClearAll();
-                    pnlPurchase.Visible = false;
+
+                    //PrintingReceipt() Start Here...
                 }
             }
         }
 
         private void txtSubtotal_TextChanged(object sender, EventArgs e)
         {
-            if (txtDiscount.Text != "") { txtSubtotal.Text = (double.Parse(txtSubtotal.Text) * double.Parse("0." + txtDiscount.Text)).ToString("N2"); }
+            if (txtDiscount.Text != "") { txtSubtotal.Text = (double.Parse(txtSubtotal.Text) - ((double.Parse(txtDiscount.Text) / double.Parse(txtSubtotal.Text)) * 100)).ToString(); }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to Cancel", "Cancelling", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                performClearAll();
+            }
+        }
 
+        private void btnVoid_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Void an Item?", "Void Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                using(VoidItem vi = new VoidItem(this))
+                {
+                    vi.ShowDialog();
+                }
+            }
+        }
+
+        private void CashierPurchased_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                btnCancel.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F1) 
+            {
+                btnVoid.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F5) 
+            {
+                btnPurchased.PerformClick();
+            }
+            else if (e.KeyCode == Keys.F2) 
+            {
+                btnSalesRep.PerformClick();
+            }
+        }
+
+        private void tblOrder_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to remove " + tblOrder.CurrentRow.Cells[0].Value.ToString(), "Void Item", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                MessageBox.Show(csm.saveInto("delete from salesorder where productNo = '" + txtProdNo.Text + "' and transactionNo = '" + lblTransactNo.Text + "'"),"Deleting",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
     }
 }

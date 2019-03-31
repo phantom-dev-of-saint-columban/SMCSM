@@ -34,3 +34,5 @@ C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\MySq
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.CashierPurchased.resources
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.exe
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.pdb
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.csprojResolveAssemblyReference.cache
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.VoidItem.resources

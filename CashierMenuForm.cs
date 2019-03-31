@@ -33,6 +33,8 @@ namespace SMCSM
 
         private void msSales_Click(object sender, EventArgs e)
         {
+            CashierPurchased cp = new CashierPurchased(mmf);
+            callFormToPnlContainer(cp);
         }
 
         private void msUserAccount_Click(object sender, EventArgs e)

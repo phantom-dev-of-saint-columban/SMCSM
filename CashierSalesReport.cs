@@ -9,18 +9,17 @@ using System.Windows.Forms;
 
 namespace SMCSM
 {
-    public partial class Form1 : Form
+    public partial class CashierSalesReport : Form
     {
-        public Form1()
+        public CashierSalesReport()
         {
             InitializeComponent();
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        #region
+        private void fillTable() 
         {
-
+        
         }
-
-   
+        #endregion
     }
 }
