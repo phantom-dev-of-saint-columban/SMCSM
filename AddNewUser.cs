@@ -66,6 +66,7 @@ namespace SMCSM
             txtName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtName.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection ad = new AutoCompleteStringCollection();
+
             MySqlDataReader reader = csm.sqlCommand("Select empno from employee").ExecuteReader();
             ad.Clear();
             while (reader.Read())

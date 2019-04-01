@@ -23,7 +23,7 @@ namespace SMCSM
         #region Dev's Method
         private void getUnitPrice(string a)
         {
-            txtUnitPrice.Text = Double.Parse(csm.countSQL("select price from product where productNo = '" + a + "'", "price")).ToString();
+            txtUnitPrice.Text = Double.Parse(csm.countSQL("select price from product where barcode = '" + a + "'", "price")).ToString();
         }
         private void performClear() 
         {
@@ -239,6 +239,11 @@ namespace SMCSM
             {
                 csr.ShowDialog();
             }
+        }
+
+        private void txtProdNo_TextChanged(object sender, EventArgs e)
+        {
+            txtDesc.Text = csm.countSQL("select description from product where barcode = '"+txtProdNo.Text+"'","description");
         }
     }
 }

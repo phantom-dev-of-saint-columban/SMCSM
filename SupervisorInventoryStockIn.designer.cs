@@ -32,24 +32,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dpDateFrom = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tblStockIn = new System.Windows.Forms.DataGridView();
-            this.lblID = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbSearchBy = new System.Windows.Forms.ComboBox();
             this.txtSearchBy = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDay = new System.Windows.Forms.Label();
-            this.llblDate = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnPrintReview = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUSERTYPE = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblStockIn)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,7 +49,8 @@
             // 
             // dtDateTo
             // 
-            this.dtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDateTo.CustomFormat = "yyyy-MM-dd";
+            this.dtDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtDateTo.Location = new System.Drawing.Point(622, 48);
             this.dtDateTo.Name = "dtDateTo";
             this.dtDateTo.Size = new System.Drawing.Size(91, 20);
@@ -77,6 +70,9 @@
             // 
             // dpDateFrom
             // 
+            this.dpDateFrom.CalendarForeColor = System.Drawing.Color.Coral;
+            this.dpDateFrom.CustomFormat = "yyyy-MM-dd";
+            this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpDateFrom.Location = new System.Drawing.Point(481, 49);
             this.dpDateFrom.Name = "dpDateFrom";
             this.dpDateFrom.Size = new System.Drawing.Size(100, 20);
@@ -93,16 +89,6 @@
             this.label3.Text = "FROM:";
             this.label3.Visible = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 14);
-            this.label8.TabIndex = 116;
-            this.label8.Text = "ID:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -115,25 +101,20 @@
             // 
             // tblStockIn
             // 
+            this.tblStockIn.AllowUserToAddRows = false;
+            this.tblStockIn.AllowUserToDeleteRows = false;
+            this.tblStockIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblStockIn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.tblStockIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblStockIn.Location = new System.Drawing.Point(6, 8);
             this.tblStockIn.Name = "tblStockIn";
             this.tblStockIn.Size = new System.Drawing.Size(888, 214);
             this.tblStockIn.TabIndex = 0;
             // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(40, 30);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(19, 14);
-            this.lblID.TabIndex = 117;
-            this.lblID.Text = "ID";
-            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnSearch.Enabled = false;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(352, 47);
@@ -149,6 +130,14 @@
             this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            "",
+            "Delivery Receipt No",
+            "Product No",
+            "Supplier ID",
+            "Unit",
+            "Quantity",
+            "Date"});
             this.cmbSearchBy.Location = new System.Drawing.Point(95, 47);
             this.cmbSearchBy.Name = "cmbSearchBy";
             this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
@@ -158,6 +147,7 @@
             // txtSearchBy
             // 
             this.txtSearchBy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchBy.Enabled = false;
             this.txtSearchBy.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBy.Location = new System.Drawing.Point(222, 47);
             this.txtSearchBy.Name = "txtSearchBy";
@@ -174,56 +164,6 @@
             this.label7.Size = new System.Drawing.Size(77, 18);
             this.label7.TabIndex = 104;
             this.label7.Text = "SEARCH BY:";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(866, 50);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(33, 14);
-            this.lblTime.TabIndex = 112;
-            this.lblTime.Text = "TIME";
-            // 
-            // lblDay
-            // 
-            this.lblDay.AutoSize = true;
-            this.lblDay.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDay.Location = new System.Drawing.Point(866, 36);
-            this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(27, 14);
-            this.lblDay.TabIndex = 111;
-            this.lblDay.Text = "DAY";
-            // 
-            // llblDate
-            // 
-            this.llblDate.AutoSize = true;
-            this.llblDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblDate.Location = new System.Drawing.Point(866, 20);
-            this.llblDate.Name = "llblDate";
-            this.llblDate.Size = new System.Drawing.Size(33, 14);
-            this.llblDate.TabIndex = 110;
-            this.llblDate.Text = "DATE";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(824, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 14);
-            this.label4.TabIndex = 109;
-            this.label4.Text = "DATE:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 14);
-            this.label2.TabIndex = 102;
-            this.label2.Text = "WELCOME";
             // 
             // btnPrintReview
             // 
@@ -268,16 +208,6 @@
             this.panel2.Size = new System.Drawing.Size(901, 236);
             this.panel2.TabIndex = 103;
             // 
-            // lblUSERTYPE
-            // 
-            this.lblUSERTYPE.AutoSize = true;
-            this.lblUSERTYPE.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUSERTYPE.Location = new System.Drawing.Point(68, 16);
-            this.lblUSERTYPE.Name = "lblUSERTYPE";
-            this.lblUSERTYPE.Size = new System.Drawing.Size(58, 14);
-            this.lblUSERTYPE.TabIndex = 108;
-            this.lblUSERTYPE.Text = "USERTYPE";
-            // 
             // SupervisorInventoryStockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,22 +217,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dpDateFrom);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cmbSearchBy);
             this.Controls.Add(this.txtSearchBy);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.lblDay);
-            this.Controls.Add(this.llblDate);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnPrintReview);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblUSERTYPE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SupervisorInventoryStockIn";
             this.Text = "SupervisorInventoryStockIn";
@@ -322,23 +244,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dpDateFrom;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView tblStockIn;
-        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmbSearchBy;
         private System.Windows.Forms.TextBox txtSearchBy;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label lblDay;
-        private System.Windows.Forms.Label llblDate;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnPrintReview;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblUSERTYPE;
     }
 }

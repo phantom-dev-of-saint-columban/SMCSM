@@ -29,19 +29,19 @@ namespace SMCSM
         }
         #endregion
 
-        private void msStockIn_Click(object sender, EventArgs e)
+        private void msStockIn_Click_1(object sender, EventArgs e)
         {
-           SupervisorInventoryStockIn sisi = new SupervisorInventoryStockIn();
-           callFormToPnlContainer(sisi);
+            SupervisorInventoryStockIn sisi = new SupervisorInventoryStockIn();
+            callFormToPnlContainer(sisi);
         }
 
-        private void msSales_Click(object sender, EventArgs e)
+        private void msSales_Click_1(object sender, EventArgs e)
         {
             SupervisorInventorySales sis = new SupervisorInventorySales();
             callFormToPnlContainer(sis);
         }
 
-        private void msStockReturn_Click(object sender, EventArgs e)
+        private void msStockReturn_Click_1(object sender, EventArgs e)
         {
             SupervisorInventoryStockReturn sisr = new SupervisorInventoryStockReturn();
             callFormToPnlContainer(sisr);
