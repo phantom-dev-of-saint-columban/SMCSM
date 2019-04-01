@@ -429,6 +429,7 @@
             this.btnSalesRep.TabIndex = 44;
             this.btnSalesRep.Text = "SALES REPORT";
             this.btnSalesRep.UseVisualStyleBackColor = false;
+            this.btnSalesRep.Click += new System.EventHandler(this.btnSalesRep_Click);
             // 
             // btnPurchased
             // 

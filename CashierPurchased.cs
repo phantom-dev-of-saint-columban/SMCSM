@@ -232,5 +232,13 @@ namespace SMCSM
                 MessageBox.Show(csm.saveInto("delete from salesorder where productNo = '" + txtProdNo.Text + "' and transactionNo = '" + lblTransactNo.Text + "'"),"Deleting",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
+        private void btnSalesRep_Click(object sender, EventArgs e)
+        {
+            using(CashierSalesReport csr = new CashierSalesReport())
+            {
+                csr.ShowDialog();
+            }
+        }
     }
 }

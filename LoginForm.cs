@@ -30,7 +30,7 @@ namespace SMCSM
                     thisMainForm.callFormToPnlContainer(new CashierMenuForm(thisMainForm));
                 break;
                 case "SUPERVISOR":
-                    MessageBox.Show("Supervisor");
+                    thisMainForm.callFormToPnlContainer(new SupervisorMainMenu(thisMainForm));
                 break;
                 case "STOCK CLERK":
                     thisMainForm.callFormToPnlContainer(new StockClerkMainMenu(thisMainForm));
@@ -39,6 +39,7 @@ namespace SMCSM
                     lblIncorrect.Visible = true; label1.ForeColor = Color.Red; label2.ForeColor = Color.Red;
                 break;
             }
+
             thisMainForm.btnLogin.Visible = true;
             thisMainForm.globalID = txtUsername.Text;
             thisMainForm._username = txtUsername.Text; thisMainForm._password = txtPassword.Text;
