@@ -17,6 +17,7 @@ namespace SMCSM
         public AdminInventoryStockInForm()
         {
             InitializeComponent();
+            fillTable();
         }
         #region Dev's Method
         public void fillTable()
@@ -115,7 +116,7 @@ namespace SMCSM
 
         private void dtDateTo_ValueChanged(object sender, EventArgs e)
         {
-            tblStockIn.DataSource = csm.fillTable("Select * from stockin where stockDate Between '"+dpDateFrom.Text+"' and '"+dpDateTo.Text+"'").Tables[0];
+            tblStockIn.DataSource = csm.fillTable("Select * from stockin si inner join stockinreg sir on si.DrNo = sir.DrNo where stockDate Between '"+dpDateFrom.Text+"' and '"+dpDateTo.Text+"'").Tables[0];
         }
     }
 }

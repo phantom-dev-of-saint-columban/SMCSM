@@ -27,12 +27,8 @@ C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.Properties.Resources.resources
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.UserAccountUserForm.resources
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.csproj.GenerateResource.Cache
-C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\SMCSM.exe
-C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\SMCSM.pdb
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\bin\Debug\MySql.Data.dll
 C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.CashierPurchased.resources
-C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.exe
-C:\Users\Thales\documents\visual studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.pdb
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.csprojResolveAssemblyReference.cache
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.VoidItem.resources
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.CashierSalesReport.resources
@@ -41,3 +37,11 @@ C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.SupervisorInventoryStockIn.resources
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.SupervisorInventoryStockReturn.resources
 C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\SMCSM.SupervisorMainMenu.resources
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\bin\Debug\Pagadian ShoeMate POS.exe.manifest
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\bin\Debug\Pagadian ShoeMate POS.application
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\bin\Debug\Pagadian ShoeMate POS.exe
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\bin\Debug\Pagadian ShoeMate POS.pdb
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\Pagadian ShoeMate POS.exe.manifest
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\Pagadian ShoeMate POS.application
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\Pagadian ShoeMate POS.exe
+C:\Users\Thales\Documents\Visual Studio 2010\Projects\SMCSM\SMCSM\obj\x86\Debug\Pagadian ShoeMate POS.pdb

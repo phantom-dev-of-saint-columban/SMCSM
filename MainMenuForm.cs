@@ -33,6 +33,14 @@ namespace SMCSM
             b.TopMost = true;
             b.Show();
         }
+        private void performClear() 
+        {
+            lblUser.Text = "";
+             _username = "";
+             _password = "";
+            globalID = "";
+
+        }
         #endregion
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -42,6 +50,7 @@ namespace SMCSM
             {
                 LoginForm lf = new LoginForm(this);
                 callFormToPnlContainer(lf);
+                performClear();
             }
             else if (dialogResult == DialogResult.No)
             {

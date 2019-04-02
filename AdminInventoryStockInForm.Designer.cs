@@ -52,9 +52,9 @@
             this.dpDateTo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dpDateTo.CustomFormat = "yyyy-MM-dd";
             this.dpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpDateTo.Location = new System.Drawing.Point(686, 74);
+            this.dpDateTo.Location = new System.Drawing.Point(689, 74);
             this.dpDateTo.Name = "dpDateTo";
-            this.dpDateTo.Size = new System.Drawing.Size(91, 20);
+            this.dpDateTo.Size = new System.Drawing.Size(94, 20);
             this.dpDateTo.TabIndex = 41;
             this.dpDateTo.ValueChanged += new System.EventHandler(this.dtDateTo_ValueChanged);
             // 
@@ -65,7 +65,7 @@
             this.dpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpDateFrom.Location = new System.Drawing.Point(554, 74);
             this.dpDateFrom.Name = "dpDateFrom";
-            this.dpDateFrom.Size = new System.Drawing.Size(91, 20);
+            this.dpDateFrom.Size = new System.Drawing.Size(94, 20);
             this.dpDateFrom.TabIndex = 40;
             // 
             // label6
@@ -84,7 +84,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(651, 77);
+            this.label5.Location = new System.Drawing.Point(654, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 18);
             this.label5.TabIndex = 38;
@@ -161,6 +161,9 @@
             // 
             // tblStockIn
             // 
+            this.tblStockIn.AllowUserToAddRows = false;
+            this.tblStockIn.AllowUserToDeleteRows = false;
+            this.tblStockIn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tblStockIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblStockIn.Location = new System.Drawing.Point(6, 6);
             this.tblStockIn.Name = "tblStockIn";

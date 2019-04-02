@@ -545,7 +545,7 @@
             this.pnlPurchase.Controls.Add(this.txtTotalPur);
             this.pnlPurchase.Location = new System.Drawing.Point(504, 90);
             this.pnlPurchase.Name = "pnlPurchase";
-            this.pnlPurchase.Size = new System.Drawing.Size(346, 207);
+            this.pnlPurchase.Size = new System.Drawing.Size(346, 213);
             this.pnlPurchase.TabIndex = 54;
             this.pnlPurchase.Visible = false;
             // 
@@ -554,7 +554,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(29, 161);
+            this.label7.Location = new System.Drawing.Point(29, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 24);
             this.label7.TabIndex = 46;
@@ -565,7 +565,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(56, 87);
+            this.label6.Location = new System.Drawing.Point(56, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 24);
             this.label6.TabIndex = 45;
@@ -576,7 +576,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 26);
+            this.label5.Location = new System.Drawing.Point(9, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 39);
             this.label5.TabIndex = 44;
@@ -586,7 +586,7 @@
             // 
             this.txtChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChange.Location = new System.Drawing.Point(123, 157);
+            this.txtChange.Location = new System.Drawing.Point(123, 160);
             this.txtChange.Name = "txtChange";
             this.txtChange.ReadOnly = true;
             this.txtChange.Size = new System.Drawing.Size(215, 32);
@@ -597,7 +597,7 @@
             // 
             this.txtCash.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCash.Location = new System.Drawing.Point(123, 74);
+            this.txtCash.Location = new System.Drawing.Point(123, 77);
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(215, 44);
             this.txtCash.TabIndex = 42;
@@ -610,7 +610,7 @@
             this.txtTotalPur.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTotalPur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtTotalPur.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPur.Location = new System.Drawing.Point(123, 18);
+            this.txtTotalPur.Location = new System.Drawing.Point(123, 21);
             this.txtTotalPur.Name = "txtTotalPur";
             this.txtTotalPur.ReadOnly = true;
             this.txtTotalPur.Size = new System.Drawing.Size(215, 50);
